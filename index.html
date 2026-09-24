@@ -2,8 +2,9 @@
 <html lang="ka">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ქართული ენა 7 – მორფოლოგია</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0f3d54">
+<title>ქართული ენა – მორფოლოგია</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;500;600;700&family=Noto+Serif+Georgian:wght@600;700&display=swap" rel="stylesheet">
@@ -120,7 +121,10 @@ table.par .bad-cell{color:var(--brick);text-decoration:line-through}
   padding:16px 20px;font-size:1rem;line-height:1.95;white-space:pre-line}
 
 .ex{background:var(--card);border:1px solid var(--line);border-radius:12px;margin:0 0 20px;overflow:hidden}
-.ex-h{padding:14px 18px;border-bottom:1px solid var(--line);background:linear-gradient(180deg,#fbfdfe,#f4f8fa)}
+.ex-h{padding:14px 18px;border-bottom:1px solid var(--line);background:linear-gradient(180deg,#fbfdfe,#f4f8fa);position:relative;padding-right:96px}
+.rulesbtn{position:absolute;top:12px;right:14px;background:#fff;border:1px solid var(--sea);color:var(--sea);
+  border-radius:99px;padding:5px 13px;font-size:.8rem;font-weight:600;cursor:pointer}
+.rulesbtn:hover{background:var(--sea-bg)}
 .ex-h .n{font-size:.74rem;font-weight:700;color:var(--sea);letter-spacing:.4px}
 .ex-h h3{font-size:1.05rem;margin:1px 0 4px}
 .ex-h p{margin:0;font-size:.9rem;color:var(--soft);max-width:78ch}
@@ -137,6 +141,13 @@ table.par .bad-cell{color:var(--brick);text-decoration:line-through}
 .cards{display:grid;gap:10px;grid-template-columns:repeat(auto-fill,minmax(268px,1fr))}
 .card{border:1px solid var(--line);border-radius:10px;padding:11px 13px;background:#fff}
 .card .w{font-weight:700;font-size:1rem;margin-bottom:7px}
+.card .w em{font-style:normal;font-weight:400;color:var(--soft);font-size:.85rem}
+.card .w .sm{color:var(--plum);font-weight:700}
+.card .w .om{color:var(--amber);font-weight:700}
+details.hint{margin:0 0 14px;border:1px dashed var(--sea);border-radius:10px;background:var(--sea-bg);padding:9px 13px}
+details.hint summary{cursor:pointer;font-weight:600;color:var(--sea);font-size:.9rem}
+details.hint .hint-in{margin-top:8px;font-size:.93rem;line-height:1.65}
+.exintro{background:#fbfcfd;border:1px solid var(--line);border-left:4px solid var(--plum);border-radius:10px;padding:12px 15px;margin:0 0 14px;font-size:.95rem;line-height:1.8}
 .card .r{display:flex;align-items:center;gap:8px;margin:5px 0}
 .card .r label{font-size:.78rem;color:var(--soft);min-width:72px}
 select{font:inherit;font-size:.88rem;padding:6px 8px;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--ink);width:100%}
@@ -181,7 +192,34 @@ table.sum td.c{text-align:center;font-weight:700;white-space:nowrap}
 table.sum tr.warn td{background:#fdf5e3}
 .note-left{font-size:.9rem;margin:10px 0 0;font-weight:600}
 footer{max-width:1040px;margin:0 auto;padding:0 16px 40px;color:var(--soft);font-size:.83rem}
-@media (max-width:520px){ .hero{padding:18px} .ex-b{padding:14px} }
+button,select,input,a{touch-action:manipulation}
+html{-webkit-tap-highlight-color:rgba(27,127,140,.15)}
+body{padding-left:env(safe-area-inset-left,0px);padding-right:env(safe-area-inset-right,0px)}
+@media (max-width:600px){
+  body{font-size:16px}
+  main{padding:16px 12px 90px}
+  .hero{padding:16px 16px;border-radius:12px;margin-bottom:18px}
+  .hero h1{font-size:1.35rem} .hero .no{font-size:2rem} .hero p{font-size:.9rem}
+  .sec{margin-bottom:24px} .sec > h2{font-size:1.05rem}
+  .ex-h,.ex-b,.ex-f{padding-left:14px;padding-right:14px}
+  .ex-h{padding-right:84px}
+  .rulesbtn{top:10px;right:10px;padding:4px 10px;font-size:.75rem}
+  .cards,.posgrid,.two{grid-template-columns:1fr}
+  .card .r{flex-direction:column;align-items:stretch;gap:3px}
+  .card .r label{min-width:0;font-size:.76rem}
+  select,input.ans,.send input,.fixrow input{font-size:16px}
+  .switch{display:flex;width:100%}
+  .switch button{flex:1 1 0;padding:11px 6px;font-size:.88rem}
+  .tok{padding:6px 12px;font-size:1rem;margin:4px 5px 4px 0}
+  .textrow .tok,.row.sentrow .tok{padding:4px 6px;margin:2px 0}
+  .brand{font-size:.9rem} .brand small{font-size:.68rem}
+  .topicbtn{max-width:46vw;font-size:.78rem;padding:7px 11px}
+  .navarrow{width:30px;height:30px}
+  .topicmenu .grid{grid-template-columns:1fr}
+  table.sum th,table.sum td{padding:6px 7px;font-size:.84rem}
+  .send{padding:16px 14px} .send input{max-width:100%}
+  .keycard{padding:15px 16px} .mini{padding:13px 14px}
+}
 </style>
 </head>
 <body>
@@ -1422,6 +1460,555 @@ footer{max-width:1040px;margin:0 auto;padding:0 16px 40px;color:var(--soft);font
   <div class="send" data-send="t22"></div>
 </section>
 
+<!-- ==================== 1.1 ==================== -->
+<section class="page" id="sec-t23" role="tabpanel">
+  <div class="hero">
+    <div class="no">1.1</div>
+    <h1>ზმნის კატეგორიები</h1>
+    <p>ზმნა მოქმედებისა და მდგომარეობის გამომხატველი მეტყველების ნაწილია. ერთ ფორმაში რამდენიმე კატეგორიის ნიშანი შეიძლება იყოს წარმოდგენილი.</p>
+  </div>
+
+  <div class="sec">
+    <h2>თოთხმეტი კატეგორია</h2>
+    <div class="posgrid" id="zmnakat"></div>
+  </div>
+
+  <div class="sec">
+    <h2>ერთი ფორმის ანალიზი: გადმოახატვინეს</h2>
+    <div class="keycard">
+      <p>ქართული ზმნის ერთი ფორმით გადმოცემულ აზრს სხვა ენაში შეიძლება მთელი წინადადება დასჭირდეს. ვნახოთ, რა ყველაფერს გვეუბნება ერთი სიტყვა:</p>
+      <p style="margin:0">მოქმედებაში ჩართულია სამი პირი – <span class="mark">გადმოახატვინეს მათ მას ის</span>. სუბიექტური პირი მრავლობით რიცხვშია და ზმნაში <b>-ეს</b> დაბოლოებით არის გამოხატული. ზმნა წარსულ დროს გამოხატავს (შეადარე: ხატავს – გადმოხატა) და დასრულებულ მოქმედებას (შეადარე: ხატავდა – გადმოხატა). ფორმა დახმარების, თხოვნის ან იძულების შინაარსს გამოხატავს და ეს <b>-ინ</b> ბოლოსართითაა გადმოცემული (შეადარე: გადმოხატა – გადმოახატვინა). <b>გადა-</b> გვიჩვენებს, რომ ხატვის პროცესი მსგავსი ნახატის შექმნას უკავშირდება (შეადარე: დახატა – გადახატა), <b>გადმო-</b> კი იმას, რომ პროცესი სუბიექტისკენაა მომართული (შეადარე: გადააxატვინეს – გადმოახატვინეს).</p>
+    </div>
+  </div>
+
+  <div class="sec">
+    <h2>წარსული დრო: უწყვეტი თუ წყვეტილი</h2>
+    <div class="two">
+      <div class="mini">
+        <h3>უწყვეტი და განმეორებული</h3>
+        <p>ზმნის აწმყოს ფორმაზე <b>-დ</b> ან <b>-ოდ</b> დაბოლოების დამატებით მივიღებთ უწყვეტი და მრავალჯერ განმეორებული მოქმედების გამომხატველ ფორმას. მას შეიძლება <b>ხოლმე</b> ნაწილაკიც დაერთოს და ამით კიდევ უფრო გაესვას ხაზი განმეორებას.</p>
+        <span class="ex">კითხულობდა · გრძნობდა · ბრუნდებოდა · მიდიოდით ხოლმე</span>
+      </div>
+      <div class="mini alt">
+        <h3>წყვეტილი და ერთჯერადი</h3>
+        <p>ერთხელ მომხდარი, დასრულებული მოქმედება.</p>
+        <span class="ex">წაიკითხა · იგრძნო · დაბრუნდა · ჩააქრო</span>
+      </div>
+    </div>
+    <div class="tablewrap" style="margin-top:12px">
+      <table class="par">
+        <thead><tr><th>აწმყო</th><th>წარსული: უწყვეტი და განმეორებული</th><th>წარსული: წყვეტილი და ერთჯერადი</th></tr></thead>
+        <tbody>
+          <tr><th>კითხულობს</th><td>კითხულობდა</td><td>წაიკითხა</td></tr>
+          <tr><th>გრძნობს</th><td>გრძნობდა</td><td>იგრძნო</td></tr>
+          <tr><th>უსმენს</th><td>უსმენდა</td><td>მოუსმინა</td></tr>
+          <tr><th>ბურტყუნებს</th><td>ბურტყუნებდა</td><td>წაიბურტყუნა</td></tr>
+          <tr><th>ეჩვენება</th><td>ეჩვენებოდა</td><td>მოეჩვენა</td></tr>
+          <tr><th>ჩერდება</th><td>ჩერდებოდა</td><td>გაჩერდა</td></tr>
+          <tr><th>ეღიმება</th><td>ეღიმებოდა</td><td>გაეღიმა</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="sec">
+    <h2>როგორ ვწეროთ უკეთესად</h2>
+    <div class="posgrid" id="zmnaorth"></div>
+  </div>
+
+  <div class="sec">
+    <h2>დავალებები</h2>
+    <div id="ex-v11a"></div>
+    <div id="ex-v11b"></div>
+    <div id="ex-v11c"></div>
+    <div id="ex-v11d"></div>
+  </div>
+  <div class="send" data-send="t23"></div>
+</section>
+
+<!-- ==================== 1.2 ==================== -->
+<section class="page" id="sec-t24" role="tabpanel">
+  <div class="hero">
+    <div class="no">1.2</div>
+    <h1>ძირეული და ნასახელარი ზმნები</h1>
+    <p>ზოგი ზმნა თავიდანვე ზმნა იყო, ზოგი კი სახელისგან არის ნაწარმოები.</p>
+  </div>
+
+  <div class="sec">
+    <h2>ორი სახის ზმნა</h2>
+    <div class="two">
+      <div class="mini">
+        <h3>ძირეული (პირველადი)</h3>
+        <p>თავიდანვე ზმნები იყო, სხვა სიტყვისგან ნაწარმოები არ არის.</p>
+        <span class="ex">აკეთებს · ხატავს · წერს · ჭრის</span>
+      </div>
+      <div class="mini alt">
+        <h3>ნასახელარი</h3>
+        <p>სახელისგან არის ნაწარმოები: სახელს დაერთვის ზმნის მაწარმოებელი აფიქსები (თავსართი ან ბოლოსართი) და ასე მივიღებთ ახალ ზმნას. თუმცა ასეთი რამ ყველა სახელთან არ არის შესაძლებელი.</p>
+        <span class="ex">დასახლდა · გამეფდა · გაშავდა · გასამდა · დაიჩემა</span>
+      </div>
+    </div>
+    <div class="tablewrap" style="margin-top:12px">
+      <table class="par">
+        <thead><tr><th>რისგან იწარმოება</th><th>მაგალითები</th></tr></thead>
+        <tbody>
+          <tr><th>არსებითი სახელისგან</th><td>დასახლდა, დამეგობრდნენ, გამეფდა, დაღამდა, გიძმობ</td></tr>
+          <tr><th>ზედსართავი სახელისგან</th><td>გაათეთრა, გაშავდა, გააწითლა, გაწითლდა, ამწვანდა, გაიაფდა, გაძვირდა, გაზარმაცდა</td></tr>
+          <tr><th>რიცხვითი სახელისგან</th><td>შეერთდა, გაორმაგდა, გასამდა, გაასდა</td></tr>
+          <tr><th>ნაცვალსახელისგან</th><td>იჩემებს, დაიჩემა, გაითავისა</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="sec">
+    <h2>დავალებები</h2>
+    <div id="ex-v12a"></div>
+    <div id="ex-v12b"></div>
+    <div id="ex-v12c"></div>
+  </div>
+  <div class="send" data-send="t24"></div>
+</section>
+
+<!-- ==================== 1.3 ==================== -->
+<section class="page" id="sec-t25" role="tabpanel">
+  <div class="hero">
+    <div class="no">1.3</div>
+    <h1>ზმნის პირიანობა</h1>
+    <p>რამდენი პირიც უკავშირდება ზმნას შინაარსობრივად, იმდენპირიანი იქნება იგი.</p>
+  </div>
+
+  <div class="sec">
+    <h2>ერთიდან ოთხ პირამდე</h2>
+    <div class="posgrid" id="piri"></div>
+    <div class="keycard" style="margin-top:12px">
+      <p style="margin:0"><b>დასამახსოვრებელი:</b> თანდებულიანი ფორმა ზმნას პირად არ შეეწყობა. ზმნას აქვს მხოლობითი და მრავლობითი რიცხვი – მოქმედებას ასრულებს ერთი ან რამდენიმე პირი.</p>
+    </div>
+  </div>
+
+  <div class="sec">
+    <h2>დავალებები</h2>
+    <div id="ex-v13a"></div>
+    <div id="ex-v13b"></div>
+    <div id="ex-v13c"></div>
+  </div>
+  <div class="send" data-send="t25"></div>
+</section>
+
+<!-- ==================== 1.4 ==================== -->
+<section class="page" id="sec-t26" role="tabpanel">
+  <div class="hero">
+    <div class="no">1.4</div>
+    <h1>სუბიექტური და ობიექტური პირები, პირის ნიშნები</h1>
+    <p>ვინ მოქმედებს, ვისზე მოქმედებს და როდის გვჭირდება ზმნაში ჰ- ან ს-.</p>
+  </div>
+
+  <div class="sec">
+    <h2>მთავარი</h2>
+    <div class="posgrid" id="pirebi"></div>
+  </div>
+
+  <div class="sec">
+    <h2>ჰ- თუ ს-?</h2>
+    <div class="keycard">
+      <p>პირდაპირი და ირიბი ობიექტური პირის ნიშნები ერთნაირია, განსხვავებაა მხოლოდ მესამე პირში: <b>პირდაპირ ობიექტს არ აქვს ნიშანი, ირიბ ობიექტს კი აქვს</b>. თუ ზმნაში ირიბი ობიექტია, მაშინ ზმნაში მისი ნიშანი უნდა იყოს.</p>
+      <p style="margin:0"><span class="mark">ს –</span> დ, თ, ტ, ძ, ც, წ ბგერების წინ &nbsp;·&nbsp; <span class="mark">ჰ –</span> ბ, ფ, პ, გ, ქ, კ, ყ ბგერების წინ</p>
+    </div>
+    <div class="tablewrap" style="margin-top:12px">
+      <table class="par">
+        <thead><tr><th>კითხვა</th><th>ორპირიანი</th><th>სამპირიანი</th></tr></thead>
+        <tbody>
+          <tr><th>რას შვრება?</th><td>წერს ის (სუბ.) მას (პირდ. ობ.)<br>ხატავს ის (სუბ.) მას (პირდ. ობ.)</td><td>სწერს ის (სუბ.) მას (ირ. ობ.) მას (პირდ. ობ.)<br>უხატავს ის (სუბ.) მას (ირ. ობ.) მას (პირდ. ობ.)</td></tr>
+          <tr><th>რა ქნა?</th><td>დაწერა მან (სუბ.) ის (პირდ. ობ.)<br>დახატა მან (სუბ.) ის (პირდ. ობ.)</td><td>მისწერა მან (სუბ.) მას (ირ. ობ.) ის (პირდ. ობ.)<br>დაუხატა მან (სუბ.) მას (ირ. ობ.) ის (პირდ. ობ.)</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="keycard" style="margin-top:12px">
+      <p style="margin:0">ხერხი: „რა ქნა?“ კითხვაზე პასუხისას პირდაპირი ობიექტი სახელობით ბრუნვაში იქნება: <span class="mark">ხატავს ის მას – დახატა მან ის</span>. ესე იგი, ირიბი ობიექტი არაა და ნიშანიც არ უნდა. შეადარე: <span class="mark">მოტეხა მან (კაცმა) ის (ტოტი)</span> – <span class="mark">მოსტეხა მან (კაცმა) მას (ხეს) ის (ტოტი)</span>.</p>
+    </div>
+  </div>
+
+  <div class="sec">
+    <h2>სამი სია</h2>
+    <div class="tablewrap">
+      <table class="par">
+        <thead><tr><th>არასდროს არ დაირთავენ ჰ/ს</th><th>ყოველთვის დაირთავენ ჰ-</th><th>ყოველთვის დაირთავენ ს-</th></tr></thead>
+        <tbody>
+          <tr><th>ზმნები</th><td>დგას, ჩანს, წევს, ქრის, ყეფს, ტირის, ჭამს, ქსოვს, დუღს, ზრუნავს, თქვა</td><td>ჰგავს, ჰქონდა, ჰქონია, ჰქვია, ჰყავს, მიჰყავს, მოჰყავს, დაჰყავს, გაჰყავს, ჩაჰყავს, ჰბაძავს, ჰგონია, დაჰკარგვია, მოჰფენია, შეჰპირდა, შეჰპირებია, წაჰგლიჯა, ჰკითხა</td><td>სთხოვს, სთხოვა, სძინავს, მისცა, მოსწონს, სჭირს, სტკივა, სწერს, სცვივა, სცივა, სძაგს, სძულს, სწამს, სწადია, სწყურია, სწყინს</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="keycard" style="margin-top:12px">
+      <p style="margin:0"><b>გამონაკლისები:</b> გასტანს, გასცემს, გამოსცემს, ასწევს, გასწევს, დასძენს, სცადა, გამოსცადა.</p>
+    </div>
+  </div>
+
+  <div class="sec">
+    <h2>ნიშანი ზოგჯერ მნიშვნელობასაც ცვლის</h2>
+    <div class="tablewrap">
+      <table class="par">
+        <thead><tr><th>ნიშნის გარეშე</th><th>ნიშნით</th></tr></thead>
+        <tbody>
+          <tr><th>გადიოდა ის<br><span style="font-weight:400;color:var(--soft)">გადიოდა დღეები.</span></th><td>გასდიოდა ის მას<br><span style="color:var(--soft)">გასდიოდა პასპორტს ვადა.</span></td></tr>
+          <tr><th>ადიოდა ის<br><span style="font-weight:400;color:var(--soft)">ადიოდა ბავშვი კიბეზე.</span></th><td>ასდიოდა ის მას<br><span style="color:var(--soft)">ბავშვს სასიამოვნო სუნი ასდიოდა.</span></td></tr>
+          <tr><th>კიდია ის<br><span style="font-weight:400;color:var(--soft)">ჭერზე ჭაღი კიდია.</span></th><td>ჰკიდია ის მას<br><span style="color:var(--soft)">ბავშვს ზურგჩანთა ჰკიდია.</span></td></tr>
+          <tr><th>ცდება ის<br><span style="font-weight:400;color:var(--soft)">ბატონი გურამი აშკარად ცდება.</span></th><td>სცდება ის მას<br><span style="color:var(--soft)">ბიჭი შესახვევს გასცდა.</span></td></tr>
+          <tr><th>ცხელა<br><span style="font-weight:400;color:var(--soft)">დღეს არ ცხელა, კარგი ამინდია.</span></th><td>სცხელა მას<br><span style="color:var(--soft)">პატარა გოგონას ძალიან სცხელა.</span></td></tr>
+          <tr><th>დის ის<br><span style="font-weight:400;color:var(--soft)">წყალი არ მოდის.</span></th><td>სდის ის მას<br><span style="color:var(--soft)">ბავშვს გაჭრილი თითიდან სისხლი მოსდის.</span></td></tr>
+          <tr><th>ჯობს ის<br><span style="font-weight:400;color:var(--soft)">ჯობს, კარგად მოიქცე.</span></th><td>სჯობს ის მას<br><span style="color:var(--soft)">მთელი დღე თამაშს სჯობს წიგნი წაიკითხო.</span></td></tr>
+          <tr><th>ცვივა ის<br><span style="font-weight:400;color:var(--soft)">ფოთლები ცვივა.</span></th><td>სცვივა ის მას<br><span style="color:var(--soft)">ამ მუხას ფოთლები სცვივა.</span></td></tr>
+          <tr><th>შედგა ის<br><span style="font-weight:400;color:var(--soft)">გუშინ დიდი მოლაპარაკება შედგა.</span></th><td>შესდგა ის მას<br><span style="color:var(--soft)">მოკრივემ მოწინააღმდეგეს ფეხებით შესდგა.</span></td></tr>
+          <tr><th>ჭრის ის მას<br><span style="font-weight:400;color:var(--soft)">ოფიციანტი დანით ჭრის ხაჭაპურს.</span></th><td>სჭრის ის მას მას<br><span style="color:var(--soft)">დალაქი გოგონას თმას სჭრის.</span></td></tr>
+          <tr><th>მოწმინდა მან ის<br><span style="font-weight:400;color:var(--soft)">დამლაგებელმა იატაკი მოწმინდა.</span></th><td>მოსწმინდა მან მას ის<br><span style="color:var(--soft)">ქალმა გოგონას ცრემლები მოსწმინდა.</span></td></tr>
+          <tr><th>წერს ის მას<br><span style="font-weight:400;color:var(--soft)">ეს სტუდენტი კარგ მოთხრობებს წერს.</span></th><td>სწერს ის მას მას<br><span style="color:var(--soft)">რატომ არ სწერ შენს მეგობარს წერილს?</span></td></tr>
+          <tr><th>მოწყვიტა მან ის<br><span style="font-weight:400;color:var(--soft)">გოგონამ გვირილა მოწყვიტა.</span></th><td>მოსწყვიტა მან მას ის<br><span style="color:var(--soft)">ბავშვმა ჩანთას ხელსაკიდი მოსწყვიტა.</span></td></tr>
+          <tr><th>მოტეხა მან ის<br><span style="font-weight:400;color:var(--soft)">ბავშვმა შემთხვევით მოტეხა ნერგი.</span></th><td>მოსტეხა მან მას ის<br><span style="color:var(--soft)">ანამ ჩაიდანს სახელური მოსტეხა.</span></td></tr>
+          <tr><th>გაყიდა მან ის<br><span style="font-weight:400;color:var(--soft)">ჩემმა მეგობარმა სახლი გაყიდა.</span></th><td>მიჰყიდა მან მას ის<br><span style="color:var(--soft)">მეგობარმა სახლი მეზობელს მიჰყიდა.</span></td></tr>
+          <tr><th>მიყვება ის მას<br><span style="font-weight:400;color:var(--soft)">დედა ერთ ზღაპარს მიყვება.</span></th><td>მიჰყვება ის მას<br><span style="color:var(--soft)">ბავშვი გზას მიჰყვება და თან მღერის.</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="sec">
+    <h2>დასამახსოვრებელი</h2>
+    <div class="posgrid" id="pirrule"></div>
+  </div>
+
+  <div class="sec">
+    <h2>დავალებები</h2>
+    <div id="ex-v14a"></div>
+    <div id="ex-v14b"></div>
+    <div id="ex-v14c"></div>
+    <div id="ex-v14d"></div>
+    <div id="ex-v14e"></div>
+    <div id="ex-v14f"></div>
+  </div>
+  <div class="send" data-send="t26"></div>
+</section>
+
+<!-- ==================== 1.5 ==================== -->
+<section class="page" id="sec-t27" role="tabpanel">
+  <div class="hero">
+    <div class="no">1.5</div>
+    <h1>პირის ნიშანთა მართლწერა</h1>
+    <p>ნიშანი, რომელიც არ ისმის, მაგრამ უნდა დაიწეროს – და ნიშანი, რომელიც ისმის, მაგრამ არ უნდა დაიწეროს.</p>
+  </div>
+
+  <div class="sec">
+    <h2>ნიშნები, რომლებიც ხშირად იკარგება</h2>
+    <div class="tablewrap">
+      <table class="par">
+        <thead><tr><th>ნიშანი</th><th>ვის აღნიშნავს</th><th>მაგალითები</th></tr></thead>
+        <tbody>
+          <tr><th>ვ-</th><td>მე, ჩვენ</td><td>ვვარჯიშობ, ვვარცხნი; ვოცნებობ; ვუთხარი, ვუყვარვარ, ვუჩვენებ, ვუყალიბებ, ვუპირისპირებთ</td></tr>
+          <tr><th>მ-</th><td>მე (ობიექტი)</td><td>მმალავს, მმართებს, მმკურნალობენ (ისინი მე)</td></tr>
+          <tr><th>გ-</th><td>შენ (ობიექტი)</td><td>გგონია, გგავს, დაგგლეჯს, გგზავნის (ის შენ)</td></tr>
+          <tr><th>გვ-</th><td>ჩვენ (ობიექტი)</td><td>დაგვგვიანებია, გვგვრის, მოგვგვარა</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="sec">
+    <h2>როგორ ვწეროთ უკეთესად</h2>
+    <div class="posgrid" id="pirorth"></div>
+  </div>
+
+  <div class="sec">
+    <h2>დავალებები</h2>
+    <div id="ex-v15a"></div>
+    <div id="ex-v15b"></div>
+    <div id="ex-v15c"></div>
+    <div id="ex-v15d"></div>
+    <div id="ex-v15e"></div>
+  </div>
+  <div class="send" data-send="t27"></div>
+</section>
+
+<!-- ==================== 1.6 ==================== -->
+<section class="page" id="sec-t28" role="tabpanel">
+  <div class="hero">
+    <div class="no">1.6</div>
+    <h1>ზმნის გარდამავლობა</h1>
+    <p>ქართულ ენაში ზმნები ორ დიდ ჯგუფად იყოფა: გარდამავალ და გარდაუვალ ზმნებად.</p>
+  </div>
+
+  <div class="sec">
+    <h2>ორი ჯგუფი</h2>
+    <div class="two">
+      <div class="mini">
+        <h3>გარდამავალი</h3>
+        <p>სუბიექტი ბრუნვაცვალებადია და ზმნა პირდაპირ (ბრუნვაცვალებად) ობიექტს შეიწყობს. ყველა სამპირიანი ზმნა გარდამავალია; ასევე ის ორპირიანი ზმნები, რომლებიც პირდაპირ ობიექტს შეიწყობენ.</p>
+        <span class="ex">წერს ის მას – დაწერა მან ის · აშენებს ის მას – ააშენა მან ის · სწერს ის მას მას – მისწერა მან მას ის</span>
+      </div>
+      <div class="mini alt">
+        <h3>გარდაუვალი</h3>
+        <p>სუბიექტი ბრუნვაუცვლელია, ან ზმნას ბრუნვაუცვლელი, ანუ ირიბი, ობიექტი შეეწყობა. ყველა ერთპირიანი ზმნა გარდაუვალია; ასევე ის ორპირიანი ზმნები, რომლებიც მხოლოდ ირიბ ობიექტს შეიწყობენ.</p>
+        <span class="ex">იმალება ბავშვი (ის) – დაიმალა ბავშვი (ის)</span>
+      </div>
+    </div>
+    <div class="tablewrap" style="margin-top:12px">
+      <table class="par">
+        <thead><tr><th>ზმნა</th><th>ერთპირიანი</th><th>ორპირიანი</th><th>სამპირიანი</th></tr></thead>
+        <tbody>
+          <tr><th>გარდამავალი</th><td>–</td><td>სუბიექტი + პირდაპირი ობიექტი</td><td>სუბიექტი + ირიბი ობ. + პირდაპირი ობ.</td></tr>
+          <tr><th>გარდაუვალი</th><td>სუბიექტი</td><td>სუბიექტი + ირიბი ობიექტი</td><td>–</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="sec">
+    <h2>როგორ დავახასიათოთ ზმნა</h2>
+    <div class="keycard">
+      <p style="margin:0"><b>ნიმუში:</b> <span class="mark">ხატავდა</span> – ზმნა ორპირიანია: ის მას. <b>ის</b> სუბიექტური პირია, III პირი, მხოლობითი რიცხვი, მისი ნიშანია ბოლოსართი -ა. <b>მას</b> ობიექტური პირია, პირდაპირი ობიექტი, რადგან ბრუნვაცვალებადია (რა ქნა? – დახატა მან ის). პირდაპირ ობიექტს ზმნაში ნიშანი არ აქვს. გარდამავალი ზმნა.</p>
+    </div>
+  </div>
+
+  <div class="sec">
+    <h2>დავალებები</h2>
+    <div id="ex-v16a"></div>
+    <div id="ex-v16c"></div>
+  </div>
+  <div class="send" data-send="t28"></div>
+</section>
+
+<!-- ==================== 1.7 ==================== -->
+<section class="page" id="sec-t29" role="tabpanel">
+  <div class="hero">
+    <div class="no">1.7</div>
+    <h1>ზმნის დრო</h1>
+    <p>ზმნის დრო გვიჩვენებს, როდის ხდება მოქმედება: საუბრისას, საუბრამდე თუ საუბრის შემდეგ.</p>
+  </div>
+
+  <div class="sec">
+    <h2>სამი დრო</h2>
+    <div class="posgrid" id="droebi"></div>
+  </div>
+
+  <div class="sec">
+    <h2>რა უნდა ვიცოდეთ</h2>
+    <div class="posgrid" id="droebi2"></div>
+  </div>
+
+  <div class="sec">
+    <h2>დავალებები</h2>
+    <div id="ex-v17a"></div>
+    <div id="ex-v17b"></div>
+    <div id="ex-v17c"></div>
+  </div>
+  <div class="send" data-send="t29"></div>
+</section>
+
+<!-- ==================== 1.8 ==================== -->
+<section class="page" id="sec-t30" role="tabpanel">
+  <div class="hero">
+    <div class="no">1.8</div>
+    <h1>ზმნის კილო</h1>
+    <p>კილო გვიჩვენებს, როგორ უნდა გავიგოთ ზმნით გამოხატული მოქმედება: როგორც ფაქტი, როგორც სასურველი თუ როგორც აუცილებლად შესასრულებელი.</p>
+  </div>
+
+  <div class="sec">
+    <h2>სამი კილო</h2>
+    <div class="posgrid" id="kilo"></div>
+    <div class="tablewrap" style="margin-top:12px">
+      <table class="par">
+        <thead><tr><th>კილო</th><th>რას გამოხატავს</th><th>მაგალითები</th></tr></thead>
+        <tbody>
+          <tr><th>თხრობითი</th><td>ფაქტი, რომელიც მოხდა, ხდება ან მოხდება</td><td>დავწერე, ვწერ, დავწერ</td></tr>
+          <tr><th>კავშირებითი</th><td>სასურველი ან შესაძლებელი მოქმედება</td><td>უნდა დავწერო, ნეტა ვწერდე, იქნებ დავწერო</td></tr>
+          <tr><th>ბრძანებითი</th><td>აუცილებლად შესასრულებელი მოქმედება</td><td>დაწერე! არ დაწერო! ნუ წერ!</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="sec">
+    <h2>ბრძანებითი კილო ორგვარია</h2>
+    <div class="two">
+      <div class="mini">
+        <h3>წართქმითი</h3>
+        <p>როცა მოქმედება უნდა შესრულდეს.</p>
+        <span class="ex">დაწერე! · ითამაშე! · დახატე! · იყვირე!</span>
+      </div>
+      <div class="mini alt">
+        <h3>უკუთქმითი</h3>
+        <p>როცა მოქმედება არ უნდა შესრულდეს, იკრძალება. აკრძალვას ქართულში გამოხატავს <b>არ</b> და <b>ნუ</b> ნაწილაკები.</p>
+        <span class="ex">არ დაწერო! · ნუ დაწერ! · არ ითამაშო! · ნუ ითამაშებ!</span>
+      </div>
+    </div>
+    <div class="keycard" style="margin-top:12px">
+      <p style="margin:0">კავშირებითი კილო ზმნის ფორმაზე სხვადასხვა ნაწილაკის დართვით გადმოიცემა: <span class="mark">შეიძლება, ნეტავ, იქნებ, ეგებ, ლამის, უნდა</span>. ბრძანებითი კილოს ფორმებით შეიძლება გადმოიცეს თხოვნა ან ხვეწნა-მუდარაც.</p>
+    </div>
+  </div>
+
+  <div class="sec">
+    <h2>დავალებები</h2>
+    <div id="ex-k18a"></div>
+    <div id="ex-k18b"></div>
+    <div id="ex-k18c"></div>
+  </div>
+  <div class="send" data-send="t30"></div>
+</section>
+
+<!-- ==================== 1.9 ==================== -->
+<section class="page" id="sec-t31" role="tabpanel">
+  <div class="hero">
+    <div class="no">1.9</div>
+    <h1>ასპექტი</h1>
+    <p>ასპექტი გვიჩვენებს, მოქმედება დაუსრულებელია თუ დასრულებული.</p>
+  </div>
+
+  <div class="sec">
+    <h2>ორი ასპექტი და უასპექტო ზმნები</h2>
+    <div class="posgrid" id="aspekti"></div>
+    <div class="keycard" style="margin-top:12px">
+      <p>ასპექტი ქართულში ზმნისწინის საშუალებით იწარმოება: უზმნისწინო ზმნები უსრული ასპექტისაა, ზმნისწინიანი ფორმები კი – სრულის: <span class="mark">ვწერე – დავწერე</span>, <span class="mark">ვკერე – შევკერე</span>.</p>
+      <p style="margin:0">უსრულ ასპექტს სამივე დრო აქვს: ახლანდელი – ვწერ, წარსული – ვწერე, მომავალი – ვწერ. სრულ ასპექტს კი მხოლოდ ორი: წარსული – დავწერე, მომავალი – დავწერ. თუ ახლანდელი დროის ფორმას ზმნისწინს დავურთავთ, ფორმა მომავალი დროისა და სრული ასპექტის გახდება: წერს – დაწერს, კერავს – შეკერავს.</p>
+    </div>
+  </div>
+
+  <div class="sec">
+    <h2>დავალებები</h2>
+    <div id="ex-a19a"></div>
+    <div id="ex-a19b"></div>
+    <div id="ex-a19c"></div>
+    <div id="ex-a19d"></div>
+  </div>
+  <div class="send" data-send="t31"></div>
+</section>
+
+<!-- ==================== 1.10 ==================== -->
+<section class="page" id="sec-t32" role="tabpanel">
+  <div class="hero">
+    <div class="no">1.10</div>
+    <h1>ზმნისწინი</h1>
+    <p>ოთხი ფუნქცია, მარტივი და რთული ზმნისწინები, ორი მიმართულება და ძველი ფორმები.</p>
+  </div>
+
+  <div class="sec">
+    <h2>ზმნისწინის ფუნქციები</h2>
+    <div class="tablewrap">
+      <table class="par">
+        <thead><tr><th>ფუნქცია</th><th>მაგალითები</th></tr></thead>
+        <tbody>
+          <tr><th>უჩვენებს მიმართულებას</th><td>მიდის, მოდის, მიფრინავს, მოფრინავს...</td></tr>
+          <tr><th>აწარმოებს მომავალ დროს</th><td>წერს – დაწერს, კერავს – შეკერავს, აშენებს – ააშენებს, ხატავს – დახატავს</td></tr>
+          <tr><th>აწარმოებს სრულ ასპექტს</th><td>წერს – დაწერა, კერავს – შეკერა, აშენებს – ააშენა, ხატავს – დახატა</td></tr>
+          <tr><th>უცვლის ზმნას მნიშვნელობას</th><td>მოიგო, გაიგო, წააგო, დააგო, ჩააგო</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="tablewrap" style="margin-top:12px">
+      <table class="par">
+        <thead><tr><th>ჯგუფი</th><th>ზმნისწინები</th></tr></thead>
+        <tbody>
+          <tr><th>მარტივი</th><td>მი, მო, ა, და, ჩა, შე, გა, წა</td></tr>
+          <tr><th>რთული</th><td>გადა, ამო, ჩამო, შემო, გადმო, წამო</td></tr>
+          <tr><th>იქითა მიმართულების</th><td>მი, ა, და, ჩა, შე, გა, გადა, წა</td></tr>
+          <tr><th>აქეთა მიმართულების</th><td>მო, ამო, ჩამო, შემო, გამო, გადმო, წამო</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="sec">
+    <h2>ზმნისწინი და თანდებული</h2>
+    <div class="tablewrap">
+      <table class="par">
+        <thead><tr><th>ზმნისწინი</th><th>მაგალითი</th><th>თანდებული</th></tr></thead>
+        <tbody>
+          <tr><th>მი-</th><td>მე სახლში მივდივარ. კაცი მიდის უნივერსიტეტში.</td><td>-ში</td></tr>
+          <tr><th>წა-</th><td>მე წავედი სახლში. მანქანა წავიდა თბილისში.</td><td>-ში</td></tr>
+          <tr><th>ა-</th><td>მე ავდივარ კიბეზე. მანქანა ადის აღმართზე.</td><td>-ზე</td></tr>
+          <tr><th>ჩა-</th><td>მე ჩავდივარ ეზოში. კაცი მეხუთე სართულიდან ჩადის ეზოში.</td><td>-ში, -იდან -ში</td></tr>
+          <tr><th>შე-</th><td>მე შევდივარ სახლში. კაცი შედის ოთახში.</td><td>-ში</td></tr>
+          <tr><th>გა-</th><td>მე გავდივარ სახლიდან. მანქანა გადის ეზოდან.</td><td>-(ი)დან</td></tr>
+          <tr><th>და-</th><td>მე დავდივარ სკოლაში. დავდივარ ცურვაზე.</td><td>-ში, -ზე</td></tr>
+          <tr><th>გადა-</th><td>მე გადავდივარ ხიდზე. სტუდენტი გადადის სხვა უნივერსიტეტში.</td><td>-ზე, -ში</td></tr>
+          <tr><th>მო-</th><td>მე მოვდივარ სახლში შენთან. მეგობარი ოფისიდან მოდის ჩემთან.</td><td>-ში, -იდან -ში</td></tr>
+          <tr><th>წამო-</th><td>მე წამოვედი შენთან სახლში.</td><td>-ში</td></tr>
+          <tr><th>ამო-</th><td>მე ამოვდივარ შენთან მეხუთე სართულზე.</td><td>-ზე</td></tr>
+          <tr><th>ჩამო-</th><td>მე ჩამოვდივარ შენთან ეზოში მეხუთე სართულიდან.</td><td>-ში, -იდან, -ზე</td></tr>
+          <tr><th>შემო-</th><td>მე შემოვდივარ შენთან სახლში.</td><td>-ში</td></tr>
+          <tr><th>გამო-</th><td>მე გამოვდივარ სახლიდან და მოვდივარ შენთან.</td><td>-(ი)დან</td></tr>
+          <tr><th>გადმო-</th><td>მე გადმოვდივარ ქუჩაზე. მეგობარი გადმოდის ჩემს ქალაქში.</td><td>-ზე, -ში</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="sec">
+    <h2>ძველი ფორმები</h2>
+    <div class="keycard">
+      <p>რამდენიმე ზმნისწინი ძველი ფორმითაც გამოიყენება და ახალი, გამარტივებული ფორმითაც: <span class="mark">გან &gt; გა</span>, <span class="mark">აღ &gt; ა</span>, <span class="mark">წარ &gt; წა</span>, <span class="mark">გარდა &gt; გადა</span>, <span class="mark">შთა &gt; ჩა</span>.</p>
+      <p style="font-size:.93rem;color:var(--soft)">გან: განმარტა, განიცდის, განაგრძო, განრისხდა, განთავისუფლდა · აღ: აღნიშნა, აღზარდა, აღწერა, აღიარა, აღმოაჩინა · წარ: წარმოთქვა, წარმოიდგინა, წარმოადგინა · გარდა: გარდაიქმნა, გარდაიცვალა · შთა: შთანთქა, შთააგონა</p>
+      <p style="margin:0">რამდენიმე ფორმა ორივენაირად გამოიყენება და შინაარსობრივად მათ შორის სხვაობაა: აღდგომა – ადგომა, შთაგონება – ჩაგონება, აღზრდა – აზრდა, განახლება – გაახლება, გარდატეხა – გადატეხა, განცხადება – გაცხადება.</p>
+    </div>
+    <div class="keycard" style="margin-top:12px">
+      <p style="margin:0">ზოგიერთ ზმნას არასოდეს არ დაერთვის ზმნისწინი: <span class="mark">არის, სძულს, უყვარს, იცის, აქვს, ჰყავს</span>. ზოგიერთი ზმნა კი უზმნისწინოდ არ გვხვდება: <span class="mark">მოდის, მიდის</span>. ზმნათა უმრავლესობას აქვს როგორც უზმნისწინო, ისე ზმნისწინიანი ფორმები.</p>
+    </div>
+  </div>
+
+  <div class="sec">
+    <h2>დავალებები</h2>
+    <div id="ex-z110a"></div>
+    <div id="ex-z110b"></div>
+    <div id="ex-z110c"></div>
+    <div id="ex-z110d"></div>
+  </div>
+  <div class="send" data-send="t32"></div>
+</section>
+
+<!-- ==================== 1.11 ==================== -->
+<section class="page" id="sec-t33" role="tabpanel">
+  <div class="hero">
+    <div class="no">1.11</div>
+    <h1>ზმნისწინიანი ფორმების მართლწერა</h1>
+    <p>სად იკარგება ზმნისწინი მთლიანად, სად დგება პირის ნიშანი და რატომ არ არსებობს „ანვითარებს“.</p>
+  </div>
+
+  <div class="sec">
+    <h2>წესები</h2>
+    <div class="posgrid" id="zmorth"></div>
+  </div>
+
+  <div class="sec">
+    <h2>სწორი და არასწორი ფორმები</h2>
+    <div class="tablewrap">
+      <table class="par">
+        <thead><tr><th>ამოსავალი</th><th>სწორია</th><th>არასწორია</th></tr></thead>
+        <tbody>
+          <tr><th>განსხვავება</th><td>განასხვავებს, ასხვავებს</td><td>ანსხვავებს</td></tr>
+          <tr><th>განსახიერება</th><td>განასახიერებს, ასახიერებს</td><td>ანსახიერებს</td></tr>
+          <tr><th>განვითარება</th><td>განავითარებს, ავითარებს</td><td>ანვითარებს</td></tr>
+          <tr><th>განზოგადება</th><td>განაზოგადებს, აზოგადებს</td><td>ანზოგადებს</td></tr>
+          <tr><th>განხორციელება</th><td>განახორციელებს, ახორციელებს, განსახორციელებელი</td><td>ანხორციელებს</td></tr>
+          <tr><th>განახლება</th><td>განაახლებს, განაახლა, განახლებული</td><td>ანახლებს</td></tr>
+          <tr><th>განთავისუფლება</th><td>განმათავისუფლეთ, გამათავისუფლეთ</td><td>გამანთავისუფლეთ</td></tr>
+          <tr><th>განკურნება</th><td>განიკურნება</td><td>ინკურნება</td></tr>
+          <tr><th>აღზრდა</th><td>აღზრდის, ზრდის, აღმზრდელი, აღვზარდე</td><td>ღზრდის, ამღზრდელი, ავღზარდე</td></tr>
+          <tr><th>აღნიშვნა</th><td>აღვნიშნავ, აღვნიშნე, აღსანიშნავი, აღმნიშვნელი</td><td>ავღნიშნავ, ავღნიშნე, ასაღნიშნავი</td></tr>
+          <tr><th>აღწერა</th><td>აღვწერ, აღგვიწერა, აღმიწერა</td><td>ავღწერ, აგვიღწერა, ამიღწერა</td></tr>
+          <tr><th>აღნუსხვა</th><td>აღვნუსხავ, აღნუსხავს, აღუნუსხველი</td><td>ავღნუსხავ, აუღნუსხველი</td></tr>
+          <tr><th>აღფრთოვანება</th><td>აღმაფრთოვანებს, აღგვაფრთოვანებს, აღსაფრთოვანებელი</td><td>ამაღფრთოვანებს</td></tr>
+          <tr><th>წარდგენა</th><td>წარმოგიდგენთ, წარვუდგენ, წარმოვადგენ</td><td>გირდგენთ, ვარდგენ</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="sec">
+    <h2>დავალებები</h2>
+    <div id="ex-z111a"></div>
+    <div id="ex-z111b"></div>
+    <div id="ex-z111c"></div>
+    <div id="ex-z111d"></div>
+  </div>
+  <div class="send" data-send="t33"></div>
+</section>
+
 </main>
 
 <footer>მასალა სახელმძღვანელოდან „ქართული ენა 7“ (შარაშენიძე).</footer>
@@ -1431,7 +2018,7 @@ footer{max-width:1040px;margin:0 auto;padding:0 16px 40px;color:var(--soft);font
 "use strict";
 
 /* ============ მასწავლებლის Apps Script-ის ბმული ============ */
-const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwZRD4MErNhmMI37DQJ5FgRXBDwpGVy-6m2qvAyM5Kunf3_falEsTO7_1mQZfw3VQyQ/exec";
+const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwJzUq_ewvKFH5NabGsyEuH9S6Pk1aiE0J3bOA5nptWzcoMefSfxnj3kqqNeG09OZu1/exec";
 
 /* ============ თემები ============ */
 const TOPICS = [
@@ -1456,7 +2043,18 @@ const TOPICS = [
   {id:"t19", no:"20‑1", title:"კუთვნილებითი და ნაწილაკდართული"},
   {id:"t20", no:"21‑1", title:"წარმოქმნილი სახელები"},
   {id:"t21", no:"22‑1", title:"რთული სახელები"},
-  {id:"t22", no:"23‑1", title:"კომპოზიტების მართლწერა"}
+  {id:"t22", no:"23‑1", title:"კომპოზიტების მართლწერა"},
+  {id:"t23", no:"1.1", title:"ზმნის კატეგორიები"},
+  {id:"t24", no:"1.2", title:"ძირეული და ნასახელარი ზმნები"},
+  {id:"t25", no:"1.3", title:"ზმნის პირიანობა"},
+  {id:"t26", no:"1.4", title:"სუბიექტური და ობიექტური პირები"},
+  {id:"t27", no:"1.5", title:"პირის ნიშანთა მართლწერა"},
+  {id:"t28", no:"1.6", title:"ზმნის გარდამავლობა"},
+  {id:"t29", no:"1.7", title:"ზმნის დრო"},
+  {id:"t30", no:"1.8", title:"ზმნის კილო"},
+  {id:"t31", no:"1.9", title:"ასპექტი"},
+  {id:"t32", no:"1.10", title:"ზმნისწინი"},
+  {id:"t33", no:"1.11", title:"ზმნისწინიანის მართლწერა"}
 ];
 
 /* ============ სტატიკური ბარათები ============ */
@@ -1687,6 +2285,98 @@ const KOMP2 = [
   {n:"ფუძეგაორმაგებული სახელები", g:"verb", tag:"დეფისით", w:"ზედსართავები, რიცხვითი ან არსებითი სახელები: პატარ-პატარა, ცივ-ცივი, ცხელ-ცხელი, ხუთ-ხუთი, ათ-ათი, ტყე-ტყე, ქუჩა-ქუჩა, სოფელ-სოფელ..."},
   {n:"სინონიმური მნიშვნელობის", g:"adv", tag:"დეფისით", w:"სიცილ-ხარხარი, ძალ-ღონე, ბედ-იღბალი..."},
   {n:"საპირისპირო მნიშვნელობის", g:"help", tag:"დეფისით", w:"ანტონიმური სიტყვები: დიდ-პატარა, სიკვდილ-სიცოცხლე... აივლ-ჩაივლის, მიათვალიერ-მოათვალიერა..."}
+];
+
+const ZMNAKAT = [
+  {n:"პირი", g:"name", tag:"ვინ", w:"მე ვწერ, შენ წერ..."},
+  {n:"რიცხვი", g:"verb", tag:"რამდენი", w:"მე ვწერ, ჩვენ ვწერთ, თქვენ წერთ..."},
+  {n:"დრო", g:"adv", tag:"როდის", w:"ვწერ, დავწერ, დავწერე..."},
+  {n:"კილო", g:"help", tag:"როგორ", w:"დავწერე, დავწერო, ნუ დაწერ..."},
+  {n:"გზისობა", g:"name", tag:"ხოლმე", w:"წერდა ხოლმე, დაწერა..."},
+  {n:"აქტი", g:"verb", tag:"თურმე", w:"დაწერა, თურმე დაუწერია..."},
+  {n:"თანამდევრობა", g:"adv", tag:"როცა", w:"როცა მოვიდა, მე ვწერდი; თურმე ეწერა..."},
+  {n:"მწკრივი", g:"help", tag:"ფორმათა რიგი", w:"ვწერ, ვწერდი, დავწერე, დამიწერია..."},
+  {n:"გეზი", g:"name", tag:"საით", w:"წერს, ჩაწერა..."},
+  {n:"ორიენტაცია", g:"verb", tag:"ვისკენ", w:"მისწერა, მოსწერა..."},
+  {n:"ასპექტი", g:"adv", tag:"დასრულდა თუ არა", w:"ვწერ, დავწერე..."},
+  {n:"გვარი", g:"help", tag:"ვინ მოქმედებს", w:"ვწერ, იწერება..."},
+  {n:"ქცევა", g:"name", tag:"ვისთვის", w:"ვწერ, ვიწერ, ვუწერ..."},
+  {n:"კონტაქტი", g:"verb", tag:"ვინ ვის ავალებს", w:"ვწერ, ვაწერინებ..."}
+];
+
+const ZMNAORTH = [
+  {n:"ხოლმე მხოლოდ უწყვეტთან", g:"name", tag:"ნაწილაკი", w:"წყვეტილი და ერთჯერადი მოქმედების გამომხატველ ზმნებთან ხოლმე ნაწილაკს ნუ გამოიყენებთ: მივდიოდით ხოლმე, მაგრამ არ შეიძლება: წავედით ხოლმე."},
+  {n:"ორი დ", g:"verb", tag:"დაბოლოება", w:"თუ ზმნის ფორმის ბოლოს დ ბგერაა, -დ დაბოლოების დართვისას ორი დ დაიწერება: წმენდს – წმენდდა. „ნინო ისევ ცრემლებს იწმენდდა“."},
+  {n:"-ნენ და არა -ენ", g:"adv", tag:"მრავლობითი", w:"-დ და -ოდ დაბოლოების შემდეგ მრავლობითი რიცხვის ნიშნად აუცილებლად უნდა დაიწეროს -ნენ: კითხულობდნენ, მიმოდიოდნენ (და არა: კითხულობდენ, მიმოდიოდენ)."}
+];
+
+const PIRI = [
+  {n:"ერთპირიანი", g:"name", tag:"ერთი პირი", w:"დგას ის · იწერება ის · ვიმალები მე · ზის ის · ხარ შენ"},
+  {n:"ორპირიანი", g:"verb", tag:"ორი პირი", w:"ვემალები მე მას · წერს ის მას · ხატავს ის მას · დახატა მან ის · ააშენა მან ის"},
+  {n:"სამპირიანი", g:"adv", tag:"სამი პირი", w:"ვუმალავ მე მას მას · ვუშენებ მე მას მას · სწერს ის მას მას · ჰკითხა მან მას ის · აუშენა მან მას ის"},
+  {n:"ოთხპირიანი", g:"help", tag:"იშვიათია", w:"მიჭმიე შენ მე მას ის · დამილევინე შენ მე მას ის"}
+];
+
+const PIREBI = [
+  {n:"სუბიექტური პირი", g:"name", tag:"მოქმედი", w:"მოქმედია, აქტიურია, მთავარია ზმნაში. ნიშნები: I – ვ-, II – ხ- ან ნიშნის გარეშე, III – -ს, -ა, -ო; მრავლობითში I – ვ- ... -თ, II – ... -თ, III – -ეს, -ენ, -ნენ, -ნ, -ან."},
+  {n:"პირდაპირი ობიექტი", g:"verb", tag:"უშუალოდ", w:"უშუალოდ უკავშირდება მოქმედებას. ნიშნები: I – მ-, II – გ-, მრავლობითში I – გვ-; მესამე პირს ნიშანი არ აქვს."},
+  {n:"ირიბი ობიექტი", g:"adv", tag:"ჰ- / ს-", w:"მოქმედებას უშუალოდ არ უკავშირდება. ნიშნები იგივეა, ოღონდ მესამე პირში ნიშანი აქვს: ჰ- ან ს-."}
+];
+
+const PIRRULE = [
+  {n:"ერთპირიანი", g:"name", tag:"ჰ/ს არ სჭირდება", w:"მხოლოდ სუბიექტურ პირს შეიწყობს, ამდენად ირიბი ობიექტური პირის ნიშანი არ სჭირდება: დგას, ჩანს, ტირის."},
+  {n:"ორპირიანი პირდაპირი ობიექტით", g:"verb", tag:"ჰ/ს არ სჭირდება", w:"„რა ქნა?“ კითხვაზე პასუხისას პირდაპირი ობიექტი სახელობით ბრუნვაში დგება: ხატავს ის მას – დახატა მან ის. ნიშანი არ უნდა."},
+  {n:"ორპირიანი ირიბი ობიექტით", g:"adv", tag:"ჰ/ს იწერება", w:"მიჰყავს ის მას. ასევე: ყიდის ის მას – გაყიდა მან ის, მაგრამ მიჰყიდა მან მას ის."},
+  {n:"სამპირიანი", g:"help", tag:"ჰ/ს სჭირდება", w:"მას ყოველთვის აქვს ირიბი ობიექტი: ჰკითხა მან მას ის; სწერს ის მას მას."}
+];
+
+const PIRORTH = [
+  {n:"ვ- ყოველთვის იწერება", g:"name", tag:"I სუბიექტური", w:"მაშინაც, როცა არ ისმის: ვუთხარი, ვუყვარვარ, ვოცნებობ, ვულაგებ, ვუჩვენებ, ვუყალიბებ, ვუპირისპირებ... ვვარჯიშობ, ვვარცხნი..."},
+  {n:"-ნენ და არა -ენ", g:"verb", tag:"მრავლობითი", w:"-დ და -ოდ დაბოლოების შემდეგ: აკეთებდნენ (და არა აკეთებდენ), ოცნებობდნენ, ტიროდნენ, იცინოდნენ, ხალისობდნენ, ფიქრობდნენ..."},
+  {n:"ორი მ", g:"adv", tag:"I ობიექტური", w:"თუ ზმნის ფუძე მ თანხმოვანზე იწყება: მმალავს, მმართებს, მმკურნალობდნენ..."},
+  {n:"ორი გ", g:"help", tag:"II ობიექტური", w:"თუ ზმნის ფუძე გ თანხმოვანზე იწყება: გგონია, დაგგლეჯს, გგავს..."},
+  {n:"ორი გვ", g:"name", tag:"I ობიექტური, მრავლ.", w:"თუ ზმნის ფუძე გვ-ზე იწყება: დაგვგვიანებია, გვგვრის, მოგვგვარა..."},
+  {n:"ჰ-", g:"verb", tag:"III ირიბი ობიექტი", w:"ჰყავს, მოჰყავს, მიჰყავს, დაჰყავს, ჰქონდა, ჰგონია, ჰყვარებია, ჰგავს, ჰქვია... სამპირიან ზმნებში: ჰკითხა, შეჰპირდა, წაჰგლიჯა..."},
+  {n:"ს-", g:"adv", tag:"III ირიბი ობიექტი", w:"სთხოვა, მისცა, სწერს (ის მას მას), სძინავს, სძულს, სწამს, სწყურია, სცივა, სწყინს..."},
+  {n:"გამონაკლისები", g:"help", tag:"ს- მაინც იწერება", w:"ირიბ ობიექტს არ შეიწყობენ, მაგრამ ს- მაინც იწერება: გასტანს, გამოსცემს, გასცემს, ასწევს, დასძენს, სცადა."},
+  {n:"ერთპირიანში – არასოდეს", g:"name", tag:"ჰ/ს არ იწერება", w:"ირიბი ობიექტი არ შეეწყობა: დგას, ჩანს, ქრის, ტირის, ქსოვს... ასევე თქვა (და არა სთქვა)."}
+];
+
+const DROEBI = [
+  {n:"წარსული – ნამყო", g:"name", tag:"საუბრამდე", w:"მოქმედება საუბრის პროცესამდე მოხდა: დახატა, დაწერა, თქვა."},
+  {n:"ახლანდელი – აწმყო", g:"verb", tag:"საუბრისას", w:"მოქმედება საუბრის პროცესში ხდება: ხატავს, წერს, ამბობს."},
+  {n:"მომავალი – მყოფადი", g:"adv", tag:"საუბრის შემდეგ", w:"მოქმედება საუბრის პროცესის შემდეგ მოხდება: დახატავს, დაწერს, იტყვის."}
+];
+
+const DROEBI2 = [
+  {n:"დროის სიტყვები აზუსტებს", g:"name", tag:"ახლა, გუშინ, ხვალ", w:"ახლა წერს, გუშინ დაწერა, ხვალ დაწერს..."},
+  {n:"ერთი ფორმა – ორი დრო", g:"verb", tag:"კონტექსტი", w:"ეს მასწავლებელი კარგად ასწავლის – ახლანდელი დრო. ნანა მოვა და გიორგის ლექსს ასწავლის – მომავალი დრო."},
+  {n:"ზოგადი დრო", g:"adv", tag:"მარადიული", w:"ზოგი ფორმა მარადიულ მოქმედებას გამოხატავს: დედამიწა მზის ირგვლივ ტრიალებს. მზე აღმოსავლეთიდან ამოდის."},
+  {n:"დროს ნიშანი არ აქვს", g:"help", tag:"ზმნისწინი, ფუძე", w:"ბევრი ზმნა მომავალს ზმნისწინით აწარმოებს: ხატავს – დახატავს, წერს – დაწერს, რეცხავს – გარეცხავს. ზოგი კი ფუძეს იცვლის: ამბობს – იტყვის – თქვა."}
+];
+
+const KILO = [
+  {n:"თხრობითი", g:"name", tag:"ფაქტი", w:"გამოხატავს ფაქტს, რომელიც მოხდა, ხდება ან მოხდება: ხატავს, დახატა, დახატავს."},
+  {n:"კავშირებითი", g:"verb", tag:"სასურველი", w:"მოქმედება არ არის ფაქტი – ის ან სასურველია, ან შესაძლებელი: მინდა დავხატო, შეიძლება დავხატო, იქნებ დავხატო, უნდა დავხატო, ნეტავ ვხატავდე."},
+  {n:"ბრძანებითი", g:"adv", tag:"აუცილებელი", w:"მოქმედება აუცილებლად უნდა შესრულდეს ან, პირიქით, იკრძალება: დაწერე! არ დაწერო! ნუ წერ!"}
+];
+
+const ASPEKTI = [
+  {n:"უსრული ასპექტი", g:"name", tag:"დაუსრულებელი", w:"მოქმედება დაუსრულებელია: წერს, წერა, კითხულობს, ვწერე, ვხატე, ვაშენე, ვკერე..."},
+  {n:"სრული ასპექტი", g:"verb", tag:"დასრულებული", w:"მოქმედება დასრულებულია: დაწერა, დაწერს, წაიკითხა, დავხატე, ავაშენე..."},
+  {n:"უასპექტო: ზმნისწინს არ დაირთავს", g:"adv", tag:"არის, უყვარს", w:"არის, უყვარს, სწყინს, სძულს, იცის, სძინავს, აგდია, აკლია, წვალობს..."},
+  {n:"უასპექტო: ზმნისწინი მხოლოდ მიმართულებას აჩვენებს", g:"help", tag:"მიდის, მოდის", w:"მიცურავს, მოცურავს, მირბის, მორბის, მიდის, მოდის..."}
+];
+
+const ZMORTH = [
+  {n:"ხმოვნის შეცვლა აკრძალულია", g:"name", tag:"მოვიდა", w:"მიუღებელია ზმნისწინის ხმოვნების შეცვლა: არ შეიძლება არც მავიდა და არც მევიდა."},
+  {n:"ორივე ფორმა სწორია", g:"verb", tag:"ძველი და ახალი", w:"ზმნისწინის ახალი სახეობების გვერდით სწორ ფორმად ითვლება ძველიც: განათავისუფლებს – გაათავისუფლებს, განასახიერებს – გაასახიერებს, აღიმაღლებს – აიმაღლებს."},
+  {n:"ზმნისწინი მთლიანად უნდა მოშორდეს", g:"adv", tag:"ღზრდის ✗", w:"აღზრდის – ზრდის (და არა ღზრდის), აღძრავს – ძრავს (და არა ღძრავს), განავითარებს – ავითარებს (და არა ანვითარებს), განახორციელებს – ახორციელებს (და არა ანხორციელებს)."},
+  {n:"პირის ნიშანი ზმნისწინის შემდეგ", g:"help", tag:"აღვნიშნავ", w:"აღ ზმნისწინის დართვისას I სუბიექტური პირის ნიშანი ზმნისწინის შემდეგ იწერება: აღვნიშნავ, აღვწერე (და არა ავღნიშნავ, ავღწერე)."},
+  {n:"ზმნისწინი არ იშლება", g:"name", tag:"გამანთავისუფლეთ ✗", w:"არ შეიძლება ზმნისწინის გათიშვა და მასში პირის ნიშნის ჩართვა. სწორია: განმათავისუფლეთ ან გამათავისუფლეთ."},
+  {n:"წარ ზმნისწინი", g:"verb", tag:"რ არ რჩება", w:"თუ წარ ზმნისწინიან ფორმას ზმნისწინს ჩამოვაშორებთ, რ ბგერა ფუძეში არ უნდა დარჩეს: წარვადგენ ან ვადგენ (და არა ვარდგენ, გირდგენთ)."},
+  {n:"ორი ან სამი ერთნაირი ბგერა", g:"adv", tag:"გააკეთა", w:"თუ ზმნა იმავე ხმოვნით იწყება, რომლითაც ზმნისწინი მთავრდება: გააკეთა, გაადვილდა, დაარსდა, შეერთდა, მოოქროვდა. შეიძლება სამმაც მოიყაროს თავი: გააადვილა, გააანალიზა, დააარსებინა."},
+  {n:"გადატანა", g:"help", tag:"შე-სრულდა", w:"სიტყვის გადატანისას უმჯობესია ფორმა ზმნისწინთან გაიყოს: შე-სრულდა, გადა-გდება, გადმო-ყვანა."}
 ];
 
 /* ============ სავარჯიშოები ============ */
@@ -1972,7 +2662,7 @@ const EX = [
   id:"orth4", topic:"t5", host:"ex-orth4", type:"grid", no:"დავალება 4",
   title:"ორმაგი თანხმოვანი გვჭირდება თუ არა?",
   task:"წარმოიდგინე მითითებული ბრუნვის ფორმა და მიუთითე, დაიწერება თუ არა ორი ერთნაირი ასო.",
-  cols:[{label:"ფორმაში", opts:["ორმაგი ასოა","ორმაგი ასო არ არის"]}],
+  cols:[{label:"", opts:["ორმაგი ასოა","ორმაგი ასო არ არის"]}],
   items:[
     {w:"ლომი – მოთხრობითი", a:["ორმაგი ასოა"]},
     {w:"კაცი – მოთხრობითი", a:["ორმაგი ასო არ არის"]},
@@ -2324,25 +3014,16 @@ const EX = [
   ]
 },
 {
-  id:"nart41", topic:"t3", host:"ex-nart41", type:"grid", no:"დავალება 7",
+  id:"nart41", topic:"t3", host:"ex-nart41", type:"typed", no:"დავალება 7",
   title:"აბრუნე ნართანიან მრავლობითში",
-  task:"ყოველ სვეტში ორი ფორმაა: ერთი ნართანიანი, მეორე -ებიანი. აირჩიე ნართანიანი.",
-  cols:[
-    {label:"სახელობითი", opts:[]},
-    {label:"ნათესაობითი", opts:[]},
-    {label:"წოდებითი", opts:[]}
-  ],
+  task:"ჩაწერე სამივე ნართანიანი ფორმა.",
+  cols:[{label:"სახელობითი"},{label:"ნათესაობითი"},{label:"წოდებითი"}],
   items:[
-    {w:"კაცი", a:["კაცნი","კაცთა","კაცნო"],
-      opts:[["კაცნი","კაცები"],["კაცთა","კაცების"],["კაცნო","კაცებო"]]},
-    {w:"ქალი", a:["ქალნი","ქალთა","ქალნო"],
-      opts:[["ქალნი","ქალები"],["ქალთა","ქალების"],["ქალნო","ქალებო"]]},
-    {w:"ამხანაგი", a:["ამხანაგნი","ამხანაგთა","ამხანაგნო"],
-      opts:[["ამხანაგნი","ამხანაგები"],["ამხანაგთა","ამხანაგების"],["ამხანაგნო","ამხანაგებო"]]},
-    {w:"ბავშვი", a:["ბავშვნი","ბავშვთა","ბავშვნო"],
-      opts:[["ბავშვნი","ბავშვები"],["ბავშვთა","ბავშვების"],["ბავშვნო","ბავშვებო"]]},
-    {w:"არწივი", a:["არწივნი","არწივთა","არწივნო"],
-      opts:[["არწივნი","არწივები"],["არწივთა","არწივების"],["არწივნო","არწივებო"]]}
+    {w:"კაცი", a:["კაცნი","კაცთა","კაცნო"]},
+    {w:"ქალი", a:["ქალნი","ქალთა","ქალნო"]},
+    {w:"ამხანაგი", a:["ამხანაგნი","ამხანაგთა","ამხანაგნო"]},
+    {w:"ბავშვი", a:["ბავშვნი","ბავშვთა","ბავშვნო"]},
+    {w:"არწივი", a:["არწივნი","არწივთა","არწივნო"]}
   ]
 },
 /* ---------- 5-1: დამატებითი ---------- */
@@ -3353,6 +4034,768 @@ const EX = [
     {t:["ტანი-სამოსი","მალე","ჩაიცვი,","რკინი-გზის","სადგურში","არ","დაგვაგვიანდეს!"], a:[0,3], fx:{0:"ტანსამოსი",3:"რკინიგზის"}}
   ]
 }
+,
+/* ---------- 1.1 ---------- */
+{
+  id:"v11a", topic:"t23", host:"ex-v11a", type:"grid", no:"დავალება 1",
+  title:"რომელი კატეგორიის მაგალითია?",
+  task:"დააკვირდი, რით განსხვავდება ფორმები ერთმანეთისაგან.",
+  cols:[{label:"", opts:["პირი","რიცხვი","დრო","კილო","გზისობა","მწკრივი","გეზი","ორიენტაცია","გვარი","ქცევა","კონტაქტი"]}],
+  items:[
+    {w:"მე ვწერ – შენ წერ", a:["პირი"]},
+    {w:"მე ვწერ – ჩვენ ვწერთ", a:["რიცხვი"]},
+    {w:"ვწერ – დავწერ – დავწერე", a:["დრო"]},
+    {w:"დავწერე – დავწერო – ნუ დაწერ", a:["კილო"]},
+    {w:"წერდა ხოლმე – დაწერა", a:["გზისობა"]},
+    {w:"ვწერ – ვწერდი – დავწერე – დამიწერია", a:["მწკრივი"]},
+    {w:"წერს – ჩაწერა", a:["გეზი"]},
+    {w:"მისწერა – მოსწერა", a:["ორიენტაცია"]},
+    {w:"ვწერ – იწერება", a:["გვარი"]},
+    {w:"ვწერ – ვიწერ – ვუწერ", a:["ქცევა"]},
+    {w:"ვწერ – ვაწერინებ", a:["კონტაქტი"]}
+  ]
+},
+{
+  id:"v11b", topic:"t23", host:"ex-v11b", type:"grid", no:"დავალება 2",
+  title:"უწყვეტი თუ წყვეტილი მოქმედება?",
+  task:"ზმნები რევაზ ინანიშვილის მოთხრობიდან „განგაშია“ ამოკრებილი. ყველა წარსულ დროშია, მაგრამ მათ შორის სხვაობაა.",
+  cols:[{label:"", opts:["უწყვეტი და განმეორებული","წყვეტილი და ერთჯერადი"]}],
+  items:[
+    {w:"აიწეწავდა", a:["უწყვეტი და განმეორებული"]},
+    {w:"აკარებდა", a:["უწყვეტი და განმეორებული"]},
+    {w:"კითხულობდა", a:["უწყვეტი და განმეორებული"]},
+    {w:"გავიდოდა", a:["უწყვეტი და განმეორებული"]},
+    {w:"ბრუნდებოდა", a:["უწყვეტი და განმეორებული"]},
+    {w:"უღრენდა", a:["უწყვეტი და განმეორებული"]},
+    {w:"შეჰყურებდა", a:["უწყვეტი და განმეორებული"]},
+    {w:"გატყდა", a:["წყვეტილი და ერთჯერადი"]},
+    {w:"გავარდა", a:["წყვეტილი და ერთჯერადი"]},
+    {w:"შევიდა", a:["წყვეტილი და ერთჯერადი"]},
+    {w:"დაბრუნდა", a:["წყვეტილი და ერთჯერადი"]},
+    {w:"დაწვა", a:["წყვეტილი და ერთჯერადი"]},
+    {w:"ჩააქრო", a:["წყვეტილი და ერთჯერადი"]},
+    {w:"გაიჯახუნა", a:["წყვეტილი და ერთჯერადი"]}
+  ]
+},
+{
+  id:"v11c", topic:"t23", host:"ex-v11c", type:"typed", no:"დავალება 3",
+  title:"აწარმოე წარსული დროის ფორმები",
+  task:"ჩაწერე ორივე ფორმა: ჯერ უწყვეტი და განმეორებული, შემდეგ წყვეტილი და ერთჯერადი.",
+  cols:[{label:"უწყვეტი"},{label:"წყვეტილი"}],
+  items:[
+    {w:"კითხულობს", a:["კითხულობდა","წაიკითხა"]},
+    {w:"გრძნობს", a:["გრძნობდა","იგრძნო"]},
+    {w:"უსმენს", a:["უსმენდა","მოუსმინა"]},
+    {w:"ბურტყუნებს", a:["ბურტყუნებდა","წაიბურტყუნა"]},
+    {w:"ეჩვენება", a:["ეჩვენებოდა","მოეჩვენა"]},
+    {w:"ჩერდება", a:["ჩერდებოდა","გაჩერდა"]},
+    {w:"ეღიმება", a:["ეღიმებოდა","გაეღიმა"]}
+  ]
+},
+{
+  id:"v11d", topic:"t23", host:"ex-v11d", type:"odd", no:"დავალება 4",
+  title:"აირჩიე სწორი ფორმა",
+  task:"გაითვალისწინე ხოლმე ნაწილაკის, ორი დ-ს და -ნენ დაბოლოების წესები.",
+  lines:[
+    {q:"რომელია სწორი?", t:["მივდიოდით ხოლმე","წავედით ხოლმე"], a:0},
+    {q:"წმენდს + -და", t:["წმენდდა","წმენდა"], a:0},
+    {q:"იწმენდს + -და", t:["იწმენდდა","იწმენდა"], a:0},
+    {q:"კითხულობდა + მრავლობითი", t:["კითხულობდნენ","კითხულობდენ"], a:0},
+    {q:"მიმოდიოდა + მრავლობითი", t:["მიმოდიოდნენ","მიმოდიოდენ"], a:0},
+    {q:"მიდიოდა + მრავლობითი", t:["მიდიოდნენ","მიდიოდენ"], a:0}
+  ]
+},
+/* ---------- 1.2 ---------- */
+{
+  id:"v12a", topic:"t24", host:"ex-v12a", type:"grid", no:"დავალება 1",
+  title:"ძირეული თუ ნასახელარი ზმნაა?",
+  task:"იფიქრე, არსებობს თუ არა სიტყვა, რომლისგანაც ეს ზმნაა ნაწარმოები.",
+  cols:[{label:"", opts:["ძირეული","ნასახელარი"]}],
+  items:[
+    {w:"მირბის", a:["ძირეული"]}, {w:"დაწერა", a:["ძირეული"]},
+    {w:"გააკეთა", a:["ძირეული"]}, {w:"შეკერა", a:["ძირეული"]},
+    {w:"ააშენა", a:["ძირეული"]}, {w:"დაჯდა", a:["ძირეული"]},
+    {w:"წაიკითხა", a:["ძირეული"]}, {w:"გადაწყვიტა", a:["ძირეული"]},
+    {w:"გამწვანდა", a:["ნასახელარი"]}, {w:"დასახლდა", a:["ნასახელარი"]},
+    {w:"გათეთრდა", a:["ნასახელარი"]}, {w:"გამეფდა", a:["ნასახელარი"]},
+    {w:"გაწითლდა", a:["ნასახელარი"]}, {w:"გასამდა", a:["ნასახელარი"]},
+    {w:"მოხუცდა", a:["ნასახელარი"]}, {w:"დაღამდა", a:["ნასახელარი"]}
+  ]
+},
+{
+  id:"v12b", topic:"t24", host:"ex-v12b", type:"grid", no:"დავალება 2",
+  title:"რომელი მეტყველების ნაწილისგან არის ნაწარმოები?",
+  task:"იპოვე ამოსავალი სიტყვა და მიუთითე, რა არის ის.",
+  cols:[{label:"", opts:["არსებითი სახელი","ზედსართავი სახელი","რიცხვითი სახელი","ნაცვალსახელი"]}],
+  items:[
+    {w:"დასახლდა", a:["არსებითი სახელი"]},
+    {w:"დამეგობრდნენ", a:["არსებითი სახელი"]},
+    {w:"გამეფდა", a:["არსებითი სახელი"]},
+    {w:"დაღამდა", a:["არსებითი სახელი"]},
+    {w:"გაათეთრა", a:["ზედსართავი სახელი"]},
+    {w:"გაშავდა", a:["ზედსართავი სახელი"]},
+    {w:"გაიაფდა", a:["ზედსართავი სახელი"]},
+    {w:"გაძვირდა", a:["ზედსართავი სახელი"]},
+    {w:"გასამდა", a:["რიცხვითი სახელი"]},
+    {w:"გაორმაგდა", a:["რიცხვითი სახელი"]},
+    {w:"გაასდა", a:["რიცხვითი სახელი"]},
+    {w:"შეერთდა", a:["რიცხვითი სახელი"]},
+    {w:"დაიჩემა", a:["ნაცვალსახელი"]},
+    {w:"გაითავისა", a:["ნაცვალსახელი"]}
+  ]
+},
+{
+  id:"v12c", topic:"t24", host:"ex-v12c", type:"typed", no:"დავალება 3",
+  title:"აღადგინე გამოტოვებული ფორმა",
+  task:"თუ სახელია მოცემული, ჩაწერე მისგან ნაწარმოები ზმნა; თუ ზმნაა, ჩაწერე ამოსავალი სახელი.",
+  cols:[{label:""}],
+  items:[
+    {w:"ნომერი → ზმნა", a:["დანომრა"]},
+    {w:"ხაზი → ზმნა", a:["გახაზა"]},
+    {w:"თევზი → ზმნა", a:["თევზაობს"]},
+    {w:"ბურთი → ზმნა", a:["ბურთაობს"]},
+    {w:"ომი → ზმნა", a:["ომობს"]},
+    {w:"ხმაური → ზმნა", a:["ხმაურობს"]},
+    {w:"დიდი → ზმნა", a:["გაადიდა"]},
+    {w:"მდიდარი → ზმნა", a:["გამდიდრდა"]},
+    {w:"მოკლე → ზმნა", a:["დამოკლდა"]},
+    {w:"ამაყი → ზმნა", a:["ამაყობს"]},
+    {w:"ცელქი → ზმნა", a:["ცელქობს"]},
+    {w:"კოჭლი → ზმნა", a:["კოჭლობს"]},
+    {w:"უნიავებს → სახელი", a:["ნიავი"]},
+    {w:"გეფიცები → სახელი", a:["ფიცი"]},
+    {w:"შეზღუდავს → სახელი", a:["ზღუდე"]}
+  ]
+},
+/* ---------- 1.3 ---------- */
+{
+  id:"v13a", topic:"t25", host:"ex-v13a", type:"grid", no:"დავალება 1",
+  title:"რამდენპირიანი ზმნაა?",
+  task:"შეუწყვე ზმნას პირები და დათვალე, რამდენი უკავშირდება მას შინაარსობრივად.",
+  cols:[{label:"", opts:["ერთპირიანი","ორპირიანი","სამპირიანი"]}],
+  items:[
+    {w:"დგას", a:["ერთპირიანი"]}, {w:"ზის", a:["ერთპირიანი"]},
+    {w:"იწერება", a:["ერთპირიანი"]}, {w:"ვიმალები", a:["ერთპირიანი"]},
+    {w:"ხარ", a:["ერთპირიანი"]}, {w:"წერს", a:["ორპირიანი"]},
+    {w:"ხატავს", a:["ორპირიანი"]}, {w:"დახატა", a:["ორპირიანი"]},
+    {w:"ააშენა", a:["ორპირიანი"]}, {w:"ვემალები", a:["ორპირიანი"]},
+    {w:"ვუმალავ", a:["სამპირიანი"]}, {w:"ვუშენებ", a:["სამპირიანი"]},
+    {w:"სწერს", a:["სამპირიანი"]}, {w:"ჰკითხა", a:["სამპირიანი"]},
+    {w:"აუშენა", a:["სამპირიანი"]}
+  ]
+},
+{
+  id:"v13b", topic:"t25", host:"ex-v13b", type:"grid", no:"დავალება 2",
+  title:"განსაზღვრე პირიანობა",
+  task:"ზმნები წიგნის სავარჯიშოდანაა. მიუთითე, რამდენპირიანია თითოეული.",
+  cols:[{label:"", opts:["ერთპირიანი","ორპირიანი","სამპირიანი"]}],
+  items:[
+    {w:"დაგროვდა", a:["ერთპირიანი"]}, {w:"ილაპარაკებენ", a:["ერთპირიანი"]},
+    {w:"ფიქრობენ", a:["ერთპირიანი"]}, {w:"დუმდნენ", a:["ერთპირიანი"]},
+    {w:"გაიზრდებიან", a:["ერთპირიანი"]}, {w:"ვითამაშოთ", a:["ერთპირიანი"]},
+    {w:"ვამბობ", a:["ორპირიანი"]}, {w:"აცვია", a:["ორპირიანი"]},
+    {w:"შევხედეთ", a:["ორპირიანი"]}, {w:"ვუსმენთ", a:["ორპირიანი"]},
+    {w:"ჰქვია", a:["ორპირიანი"]}, {w:"უყვართ", a:["ორპირიანი"]},
+    {w:"მოაგონდა", a:["ორპირიანი"]}, {w:"უკეთებენ", a:["სამპირიანი"]},
+    {w:"ჩაუსხეს", a:["სამპირიანი"]}
+  ]
+},
+{
+  id:"v13c", topic:"t25", host:"ex-v13c", type:"typed", no:"დავალება 3",
+  title:"შეუწყვე ზმნას პირები",
+  task:"ჩაწერე ის ნაცვალსახელები, რომლებიც ზმნას შეეწყობა. ნიმუში: დგას → ის; წერს → ის მას.",
+  cols:[{label:""}],
+  items:[
+    {w:"ზის", a:["ის"]},
+    {w:"ვიმალები", a:["მე"]},
+    {w:"ხარ", a:["შენ"]},
+    {w:"ხატავს", a:["ის მას"]},
+    {w:"დახატა", a:["მან ის"]},
+    {w:"ვემალები", a:["მე მას"]},
+    {w:"ვუმალავ", a:["მე მას მას"]},
+    {w:"ჰკითხა", a:["მან მას ის"]},
+    {w:"აუშენა", a:["მან მას ის"]}
+  ]
+}
+,
+/* ---------- 1.4 ---------- */
+{
+  id:"v14a", topic:"t26", host:"ex-v14a", type:"grid", no:"დავალება 1",
+  title:"შეუწყვე პირები და დაახასიათე",
+  task:"მიუთითე, რამდენპირიანია ზმნა და აქვს თუ არა მას ირიბი ობიექტი.",
+  cols:[
+    {label:"პირიანობა", opts:["ერთპირიანი","ორპირიანი","სამპირიანი"]},
+    {label:"ირიბი ობიექტი", opts:["აქვს","არ აქვს"]}
+  ],
+  items:[
+    {w:"შენდება", a:["ერთპირიანი","არ აქვს"]},
+    {w:"აშენებს", a:["ორპირიანი","არ აქვს"]},
+    {w:"უშენებს", a:["სამპირიანი","აქვს"]},
+    {w:"იკერება", a:["ერთპირიანი","არ აქვს"]},
+    {w:"კერავს", a:["ორპირიანი","არ აქვს"]},
+    {w:"უკერავს", a:["სამპირიანი","აქვს"]}
+  ]
+},
+{
+  id:"v14b", topic:"t26", host:"ex-v14b", type:"grid", no:"დავალება 2",
+  title:"ვისი ნიშანია ზმნაში?",
+  task:"ერთ ზმნაში ორივე პირის ნიშანი შეიძლება იყოს. იისფრად სუბიექტური პირის ნიშანია გამოყოფილი, ქარვისფრად – ობიექტურის. ორივე სვეტში მიუთითე, რომელი პირია.",
+  cols:[
+    {label:"სუბიექტური", opts:["I მხოლობითი (ვ-)","I მრავლობითი (ვ- ... -თ)","II მხოლობითი (უნიშნო)","II მრავლობითი (-თ)","III მხოლობითი (-ს, -ა)","III მრავლობითი (-ენ, -ეს, -ნენ)"]},
+    {label:"ობიექტური", opts:["I მხოლობითი (მ-)","I მრავლობითი (გვ-)","II (გ-)","III პირდაპირი (უნიშნო)","III ირიბი (ჰ-, ს-)"]}
+  ],
+  items:[
+    {w:"ვხატავ (მე მას)", wHtml:'<span class="sm">ვ</span>ხატავ <em>(მე მას)</em>',
+      a:["I მხოლობითი (ვ-)","III პირდაპირი (უნიშნო)"]},
+    {w:"ხატავ (შენ მას)", wHtml:'ხატავ <em>(შენ მას)</em>',
+      a:["II მხოლობითი (უნიშნო)","III პირდაპირი (უნიშნო)"]},
+    {w:"ხატავს (ის მას)", wHtml:'ხატავ<span class="sm">ს</span> <em>(ის მას)</em>',
+      a:["III მხოლობითი (-ს, -ა)","III პირდაპირი (უნიშნო)"]},
+    {w:"ვხატავთ (ჩვენ მას)", wHtml:'<span class="sm">ვ</span>ხატავ<span class="sm">თ</span> <em>(ჩვენ მას)</em>',
+      a:["I მრავლობითი (ვ- ... -თ)","III პირდაპირი (უნიშნო)"]},
+    {w:"მხედავს (ის მე)", wHtml:'<span class="om">მ</span>ხედავ<span class="sm">ს</span> <em>(ის მე)</em>',
+      a:["III მხოლობითი (-ს, -ა)","I მხოლობითი (მ-)"]},
+    {w:"გხედავს (ის შენ)", wHtml:'<span class="om">გ</span>ხედავ<span class="sm">ს</span> <em>(ის შენ)</em>',
+      a:["III მხოლობითი (-ს, -ა)","II (გ-)"]},
+    {w:"გვხედავს (ის ჩვენ)", wHtml:'<span class="om">გვ</span>ხედავ<span class="sm">ს</span> <em>(ის ჩვენ)</em>',
+      a:["III მხოლობითი (-ს, -ა)","I მრავლობითი (გვ-)"]},
+    {w:"გვხედავთ (თქვენ ჩვენ)", wHtml:'<span class="om">გვ</span>ხედავ<span class="sm">თ</span> <em>(თქვენ ჩვენ)</em>',
+      a:["II მრავლობითი (-თ)","I მრავლობითი (გვ-)"]},
+    {w:"მხედავენ (ისინი მე)", wHtml:'<span class="om">მ</span>ხედავ<span class="sm">ენ</span> <em>(ისინი მე)</em>',
+      a:["III მრავლობითი (-ენ, -ეს, -ნენ)","I მხოლობითი (მ-)"]},
+    {w:"გწერენ (ისინი შენ მას)", wHtml:'<span class="om">გ</span>წერ<span class="sm">ენ</span> <em>(ისინი შენ მას)</em>',
+      a:["III მრავლობითი (-ენ, -ეს, -ნენ)","II (გ-)"]},
+    {w:"სწერს (ის მას მას)", wHtml:'<span class="om">ს</span>წერ<span class="sm">ს</span> <em>(ის მას მას)</em>',
+      a:["III მხოლობითი (-ს, -ა)","III ირიბი (ჰ-, ს-)"]},
+    {w:"ჰკითხა (მან მას ის)", wHtml:'<span class="om">ჰ</span>კითხ<span class="sm">ა</span> <em>(მან მას ის)</em>',
+      a:["III მხოლობითი (-ს, -ა)","III ირიბი (ჰ-, ს-)"]}
+  ]
+},
+{
+  id:"v14c", topic:"t26", host:"ex-v14c", type:"grid", no:"დავალება 3",
+  title:"ჰ-, ს- თუ არცერთი?",
+  task:"მიუთითე, რომელი ნიშანი დაერთვის ზმნას. გახსოვდეს: ს – დ, თ, ტ, ძ, ც, წ ბგერების წინ; ჰ – ბ, ფ, პ, გ, ქ, კ, ყ ბგერების წინ.",
+  cols:[{label:"", opts:["ჰ-","ს-","არცერთი"]}],
+  items:[
+    {w:"...გავს (ის მას)", a:["ჰ-"]}, {w:"...ქონდა (მას ის)", a:["ჰ-"]},
+    {w:"...ქვია (მას ის)", a:["ჰ-"]}, {w:"...ყავს (მას ის)", a:["ჰ-"]},
+    {w:"...კითხა (მან მას ის)", a:["ჰ-"]}, {w:"...ბაძავს (ის მას)", a:["ჰ-"]},
+    {w:"...ძინავს (მას)", a:["ს-"]}, {w:"მო...წონს (მას ის)", a:["ს-"]},
+    {w:"...ჭირს (მას ის)", a:["ს-"]}, {w:"...ტკივა (მას ის)", a:["ს-"]},
+    {w:"...წყურია (მას)", a:["ს-"]}, {w:"...ცივა (მას)", a:["ს-"]},
+    {w:"დგას (ის)", a:["არცერთი"]}, {w:"ჩანს (ის)", a:["არცერთი"]},
+    {w:"ჭამს (ის მას)", a:["არცერთი"]}, {w:"ქსოვს (ის მას)", a:["არცერთი"]},
+    {w:"ტირის (ის)", a:["არცერთი"]}, {w:"ყეფს (ის)", a:["არცერთი"]}
+  ]
+},
+{
+  id:"v14d", topic:"t26", host:"ex-v14d", type:"odd", no:"დავალება 4",
+  title:"შეარჩიე ზმნის სწორი ფორმა",
+  task:"დაფიქრდი, არის თუ არა წინადადებაში ირიბი ობიექტი.",
+  lines:[
+    {q:"ვიზა მაქვს, მაგრამ ვადა მალე ... .", t:["გასდის","გადის"], a:0},
+    {q:"ქალბატონ თამარს ძალიან ... და ფანჯრის გაღება ითხოვა.", t:["სცხელა","ცხელა"], a:0},
+    {q:"მე არ ვიცი, რა ... , სახლში წავიდე თუ დავიცადო?", t:["ჯობს","სჯობს"], a:0},
+    {q:"ჩემი მეგობარი უნივერსიტეტს ... წერილს.", t:["სწერს","წერს"], a:0},
+    {q:"თუ გინდა, უკეთესად გაგიცნო, რაღაც უნდა ... შენ შესახებ.", t:["მოყვე","მოჰყვე"], a:0},
+    {q:"მე დარწმუნებული ვარ, ანა ... , როცა სხვებს ადანაშაულებს.", t:["ცდება","სცდება"], a:0},
+    {q:"ქალბატონ ქეთევანს სუნამოს სასიამოვნო სუნი ... .", t:["ასდიოდა","ადიოდა"], a:0},
+    {q:"ჭერიდან რაღაც ... , რა ხდება?", t:["ცვივა","სცვივა"], a:0},
+    {q:"ვინ ... ფეხი ამ ლარნაკს?", t:["მოსტეხა","მოტეხა"], a:0},
+    {q:"გოგონას სახეზე მური ჰქონდა და ძმამ ცხვირსახოცით ... .", t:["მოსწმინდა","მოწმინდა"], a:0}
+  ]
+},
+{
+  id:"v14e", topic:"t26", host:"ex-v14e", type:"text", fixMode:true, no:"დავალება 5",
+  title:"იპოვე და გაასწორე შეცდომები",
+  task:"დააწკაპუნე არასწორ ფორმას და ჩაწერე სწორი.",
+  lines:[
+    {t:["პატარა","გოგონას","ყველაფერი","წყინს","და","ტირის."], a:[3], fx:{3:"სწყინს"}},
+    {t:["როგორც","სჩანს,","შენ","ჩემზე","ნაწყენი","ხარ."], a:[1], fx:{1:"ჩანს"}},
+    {t:["ნათია","დედას","ყველაფრის","გაკეთებას","დაპირდა."], a:[4], fx:{4:"დაჰპირდა"}},
+    {t:["ჩვენი","ძაღლი","მთელი","ღამე","ჰყეფდა,","ნეტავ","რატომ?"], a:[4], fx:{4:"ყეფდა"}},
+    {t:["რაც","შენ","გულს","წადია,","ის","უნდა","გააკეთო."], a:[3], fx:{3:"სწადია"}},
+    {t:["ანას","ძინავს?","–","ჯერ","არა."], a:[1], fx:{1:"სძინავს"}},
+    {t:["მე","მგონი,","სალომეს","არ","მოწონს","ახალი","კაბა."], a:[4], fx:{4:"მოსწონს"}},
+    {t:["ვერ","გავიგე,","რა","ჭირს","ჩვენს","მეგობარს."], a:[3], fx:{3:"სჭირს"}},
+    {t:["დღეს","ცუდი","ამინდია","და","ქარი","ჰქრის."], a:[5], fx:{5:"ქრის"}},
+    {t:["ნანას","გონია,","რომ","მე","მისი","რვეული","ავიღე."], a:[1], fx:{1:"ჰგონია"}}
+  ]
+},
+{
+  id:"v14f", topic:"t26", host:"ex-v14f", type:"text", fixMode:true, no:"დავალება 6",
+  title:"შემაჯამებელი: გაასწორე ტექსტი",
+  task:"ტექსტი ცოდნის გადაცემის ისტორიაზეა. დააწკაპუნე არასწორად დაწერილ სიტყვას და ჩაწერე სწორი ფორმა. ზოგ წინადადებაში ორი ან სამი შეცდომაა.",
+  lines:[
+    {t:["ძველი","ცივილიზაციების","დიდი","მიღწევა","ის","იყო,","რო","მათმა","დაიწყეს","ინფორმაციის","გადაცემა."], a:[6,7], fx:{6:"რომ",7:"მათ"}},
+    {t:["ქაღალდის","გაჩენამდის","ადამიანები","საწერ","მასალათ","ყველაფერს","იყენებდნენ."], a:[1,4], fx:{1:"გაჩენამდე",4:"მასალად"}},
+    {t:["იყენებდნენ","თიხის","ფირფიტეფს,","ქვებს,","ნაგებობის","კედელებს."], a:[2,5], fx:{2:"ფირფიტებს",5:"კედლებს"}},
+    {t:["ქაღალდის","გამოგონების","შედეგ","მალევე","ჩამოყალიბდა","წიგნის","შექმნის","იდეა."], a:[2], fx:{2:"შედეგად"}},
+    {t:["უკვე","მე-XIII-ე","საუკუნედან","წიგნის","დასამზადებლად","ქაღალდი","გამოიყენებოდა."], a:[1,2], fx:{1:"XIII",2:"საუკუნიდან"}},
+    {t:["წიგნი","გახდა","განათლებისა","და","აღზრდის","უუმნიშვნელოვანესი","საშვალება."], a:[5,6], fx:{5:"უმნიშვნელოვანესი",6:"საშუალება"}},
+    {t:["თანამედროვე","წიგნი","წარმოადგენს","ყდაში","ჩამაგრებულ","ფურცელებს."], a:[5], fx:{5:"ფურცლებს"}},
+    {t:["დღეს","წიგნები","განთავსებულია","სხვა და სხვა","მოწყობილობაში."], a:[3], fx:{3:"სხვადასხვა"}},
+    {t:["ბევრი","ფიქრობდა,","რომ","ახალი","ტექნოლოგიების","ჩაანაცვლებდა","წიგნს."], a:[4], fx:{4:"ტექნოლოგიები"}},
+    {t:["მაგრამ,","საბედნიეროთ,","ასე","არ","მოხთა."], a:[1,4], fx:{1:"საბედნიეროდ",4:"მოხდა"}},
+    {t:["წიგნმა","გააგძელა","ცხოვრება","და","ინფორმაციის","გადაცემის","მთვარ","საშვალებათ","მაინც","დარჩა."], a:[1,6,7], fx:{1:"გააგრძელა",6:"მთავარ",7:"საშუალებად"}}
+  ]
+}
+,
+/* ---------- 1.5 ---------- */
+{
+  id:"v15a", topic:"t27", host:"ex-v15a", type:"odd", no:"დავალება 1",
+  title:"აირჩიე სწორი ფორმა",
+  task:"ფრჩხილებში მითითებულია პირები.",
+  lines:[
+    {q:"(მე)", t:["ვვარჯიშობ","ვარჯიშობ"], a:0},
+    {q:"(მე)", t:["ვოცნებობ","ოცნებობ"], a:0},
+    {q:"(მე მას ის)", t:["ვუთხარი","უთხარი"], a:0},
+    {q:"(ის მე)", t:["მმალავს","მალავს"], a:0},
+    {q:"(შენ)", t:["გგონია","გონია"], a:0},
+    {q:"(ჩვენ)", t:["დაგვგვიანებია","დაგვიანებია"], a:0},
+    {q:"(ისინი მას)", t:["აკეთებდნენ","აკეთებდენ"], a:0},
+    {q:"(მან ის)", t:["თქვა","სთქვა"], a:0},
+    {q:"(ის)", t:["ჩანს","სჩანს"], a:0},
+    {q:"(მას ის)", t:["ჰყავს","ყავს"], a:0},
+    {q:"(მას)", t:["სწყურია","წყურია"], a:0}
+  ]
+},
+{
+  id:"v15b", topic:"t27", host:"ex-v15b", type:"text", fixMode:true, no:"დავალება 2",
+  title:"გაასწორე შეცდომები",
+  task:"დააწკაპუნე არასწორ ფორმას და ჩაწერე სწორი. ზოგ წინადადებაში ორი შეცდომაა.",
+  lines:[
+    {t:["მე","ამ","გადაცემას","არ","უყურებ","და","არ","ვიცი,","რის","შესახებ","არის."], a:[4], fx:{4:"ვუყურებ"}},
+    {t:["ეს","ძალიან","ლამაზი","გოგონა","ვის","გავს?"], a:[5], fx:{5:"ჰგავს|ჰგავს?"}},
+    {t:["ახლა","ჩემი","ძმა","კითხულობს,","მაგრამ","არ","მოწონს."], a:[6], fx:{6:"მოსწონს|მოსწონს."}},
+    {t:["მე","კვირაში","სამჯერ","ვარჯიშობ."], a:[3], fx:{3:"ვვარჯიშობ|ვვარჯიშობ."}},
+    {t:["ანას","სთქვა,","რომ","ხვალ","სკოლაში","ღონისძიება","იმართება."], a:[0,1], fx:{0:"ანამ",1:"თქვა|თქვა,"}},
+    {t:["შენ","როგორ","გონია,","ტესტს","კარგად","დავწერთ?"], a:[2], fx:{2:"გგონია|გგონია,"}},
+    {t:["სალომეს","რამდენი","და-ძმა","ყავს?"], a:[3], fx:{3:"ჰყავს|ჰყავს?"}},
+    {t:["სკოლაში","რა","ხდებოდა?","–","კითხვა","გიორგიმ","თავის","მეგობარს."], a:[4], fx:{4:"ჰკითხა"}},
+    {t:["თქვენ","სად","გზავნიან?","–","ჩვენ","სხვა","სკოლაში","გვზავნიან."], a:[2,7], fx:{2:"გგზავნიან|გგზავნიან?",7:"გვგზავნიან|გვგზავნიან."}}
+  ]
+},
+{
+  id:"v15c", topic:"t27", host:"ex-v15c", type:"text", fixMode:true, no:"დავალება 3",
+  title:"გაასწორე შეცდომები: ს- და ჰ-",
+  task:"დააწკაპუნე არასწორ ფორმას და ჩაწერე სწორი. ზოგ წინადადებაში ორი შეცდომაა.",
+  lines:[
+    {t:["გამომცემლობამ","წელს","ხუთი","სახელმძღვანელო","გამოცა","და","მომავალ","წელს","შვიდს","გამოცემს."], a:[4,9], fx:{4:"გამოსცა",9:"გამოსცემს|გამოსცემს."}},
+    {t:["გერმანიის","მხარემ","ტვირთის","განბაჟების","ნებართვა","გაცა."], a:[5], fx:{5:"გასცა|გასცა."}},
+    {t:["ჩხიკვაძე","ჩემპიონატზე","სარეკორდო","სიმძიმეს","აწევს."], a:[4], fx:{4:"ასწევს|ასწევს."}},
+    {t:["აღელვებულ","მიხეილს","თანამშრომელმა","ხელი","ტაცა."], a:[4], fx:{4:"სტაცა|სტაცა."}},
+    {t:["ტრენინგის","შემდეგ","ორგანიზაცია","შესაბამის","სერტიფიკატს","გაცემს."], a:[5], fx:{5:"გასცემს|გასცემს."}},
+    {t:["გუშინდელმა","თათბირმა","სამ","საათს","გატანა."], a:[4], fx:{4:"გასტანა|გასტანა."}},
+    {t:["გიგას","მეგობარი","მას","ყოველ","კვირას","წერს","წერილებს."], a:[5], fx:{5:"სწერს"}},
+    {t:["მოხსენების","ბოლოს","გამომსვლელმა","დაძინა,","რომ","კმაყოფილი","იყო."], a:[3], fx:{3:"დასძინა|დასძინა,"}},
+    {t:["გიორგი","ყოველთვის","ბაძავდა","თავის","უფროს","ძმას."], a:[2], fx:{2:"ჰბაძავდა"}}
+  ]
+},
+{
+  id:"v15d", topic:"t27", host:"ex-v15d", type:"text", fixMode:true, no:"დავალება 4",
+  title:"ტექსტის რედაქტირება: მუცო",
+  task:"ტექსტი პირიქითა ხევსურეთის ციხე-ქალაქ მუცოზეა. დააწკაპუნე არასწორ ფორმას და ჩაწერე სწორი.",
+  lines:[
+    {t:["ეს","სიმაგრე","არწივის","ბუდისავით","მოსჩანს","სალი","კლდეს","მწვერვალზე"], a:[4,6], fx:{4:"მოჩანს",6:"კლდის"}},
+    {t:["და","აღტაცებაში","მოყავს","მნახველები."], a:[2], fx:{2:"მოჰყავს"}},
+    {t:["აკლდამებში","მუცოელები","ჟამიანობისას","სიკვდილს","ეგებებოდენ."], a:[4], fx:{4:"ეგებებოდნენ|ეგებებოდნენ."}},
+    {t:["მუცოელნი","მთავარანგელოზის","ყმები","იყვენ,","ქონდათ","მათი","საგანძური."], a:[3,4], fx:{3:"იყვნენ|იყვნენ,",4:"ჰქონდათ"}},
+    {t:["მხოლოთ","მუცოშია","სალოცავი","სოფელის","შიგნით","მოქცეული."], a:[0,3], fx:{0:"მხოლოდ",3:"სოფლის"}},
+    {t:["სხვა","ხევსურულ","სოფლებში","ეს","არსათ","გვხვდება."], a:[4], fx:{4:"არსად"}},
+    {t:["მუცოში","2-ე","სალოცავიცაა."], a:[1], fx:{1:"მე-2"}},
+    {t:["ლეგენდის","თანახმათ","კახთა","მეფე","მტერს","გამორიდებია."], a:[1], fx:{1:"თანახმად"}},
+    {t:["აქ","გადიოდა","ტრანს კავკასიური","გზა,","რომელსზეც","საქარავანო","მიმოსვლა","იყო."], a:[2,4], fx:{2:"ტრანსკავკასიური",4:"რომელზეც"}}
+  ]
+},
+{
+  id:"v15e", topic:"t27", host:"ex-v15e", type:"odd", no:"დავალება 5",
+  title:"„უძღები შვილი“: რომელი ფორმაა სწორი?",
+  task:"ყოველ წინადადებაში ზმნის ორი ფორმაა მოცემული. აირჩიე სწორი.",
+  lines:[
+    {q:"ერთ კაცს ორი ძე ... .", t:["ჰყავდა","ყავდა"], a:0},
+    {q:"ცოტა ხანმა რომ განვლო, უმცროსმა ... ყველაფერი.", t:["შეკრიბა","შეჰკრიბა"], a:0},
+    {q:"ძე შეცდომილი ... , ნეტავი ღორების საჭმელი რკოთი მაინც ამომავსებინაო მუცელი.", t:["ნატრობდა","ჰნატრობდა"], a:0},
+    {q:"გონს რომ მოეგო, ... .", t:["თქვა","სთქვა"], a:0},
+    {q:"ადგა და მამისკენ ... .", t:["გასწია","გაწია"], a:0},
+    {q:"მამამ შვილი დაინახა, გამოიქცა, კისერზე მოეჭდო და ... .", t:["კოცნიდა","ჰკოცნიდა"], a:0},
+    {q:"მალე უფროსი ძე ყანიდან ... .", t:["დაბრუნდა","დაჰბრუნდა"], a:0}
+  ]
+},
+/* ---------- 1.6 ---------- */
+{
+  id:"v16a", topic:"t28", host:"ex-v16a", type:"grid", no:"დავალება 1",
+  title:"გაარჩიე ზმნები ნიმუშის მიხედვით",
+  task:"გაარკვიე, რამდენპირიანია ზმნა, რომელი პირები შეეწყობა და როგორია ეს პირები. „პირები“ ველში ჩაწერე ნაცვალსახელები (მაგ.: ის მას).",
+  hintLabel:"გაგიჭირდა? ნახე გარჩევის ნიმუში",
+  hintHtml:"<b>ხატავდა</b> – ზმნა ორპირიანია: <b>ის მას</b>. <b>ის</b> სუბიექტური პირია, III პირი, მხოლობითი რიცხვი, მისი ნიშანია ბოლოსართი <b>-ა</b>. <b>მას</b> ობიექტური პირია, პირდაპირი ობიექტი, რადგან ბრუნვაცვალებადია (რა ქნა? – დახატა მან ის). პირდაპირ ობიექტს ზმნაში ნიშანი არ აქვს. <b>გარდამავალი ზმნა</b>.<br><br><span style='color:var(--soft)'>გახსოვდეს: ერთპირიანი ზმნა ყოველთვის გარდაუვალია; სამპირიანი – ყოველთვის გარდამავალი; ორპირიანი გარდამავალია, თუ პირდაპირი ობიექტი აქვს, და გარდაუვალი, თუ ირიბი.</span>",
+  cols:[
+    {label:"პირები", typed:true},
+    {label:"პირიანობა", opts:["ერთპირიანი","ორპირიანი","სამპირიანი"]},
+    {label:"სუბიექტი", opts:["I მხოლობითი","I მრავლობითი","II მხოლობითი","II მრავლობითი","III მხოლობითი","III მრავლობითი"]},
+    {label:"სუბიექტის ნიშანი", opts:["ვ-","ვ- ... -თ","უნიშნო","-თ","-ს","-ა","-ო","-ეს","-ენ","-ნენ","-ან"]},
+    {label:"ობიექტი", opts:["არ აქვს","პირდაპირი","ირიბი","პირდაპირი და ირიბი"]},
+    {label:"გარდამავლობა", opts:["გარდამავალი","გარდაუვალი"]}
+  ],
+  items:[
+    {w:"დავალაგეთ", a:["ჩვენ ის","ორპირიანი","I მრავლობითი","ვ- ... -თ","პირდაპირი","გარდამავალი"]},
+    {w:"ბზუიან", a:["ისინი","ერთპირიანი","III მრავლობითი","-ან","არ აქვს","გარდაუვალი"]},
+    {w:"დაიწყეს", a:["მათ ის","ორპირიანი","III მრავლობითი","-ეს","პირდაპირი","გარდამავალი"]},
+    {w:"დავიძინე", a:["მე","ერთპირიანი","I მხოლობითი","ვ-","არ აქვს","გარდაუვალი"]},
+    {w:"დარბოდნენ", a:["ისინი","ერთპირიანი","III მრავლობითი","-ნენ","არ აქვს","გარდაუვალი"]},
+    {w:"მომამზადეს", a:["მათ მე","ორპირიანი","III მრავლობითი","-ეს","პირდაპირი","გარდამავალი"]},
+    {w:"გვესროდა", a:["ის ჩვენ მას","სამპირიანი","III მხოლობითი","-ა","პირდაპირი და ირიბი","გარდამავალი"]},
+    {w:"მომცა", a:["მან მე ის","სამპირიანი","III მხოლობითი","-ა","პირდაპირი და ირიბი","გარდამავალი"]},
+    {w:"გამოგიგზავნა", a:["მან შენ ის","სამპირიანი","III მხოლობითი","-ა","პირდაპირი და ირიბი","გარდამავალი"]},
+    {w:"მისწერა", a:["მან მას ის","სამპირიანი","III მხოლობითი","-ა","პირდაპირი და ირიბი","გარდამავალი"]}
+  ]
+},
+{
+  id:"v16c", topic:"t28", host:"ex-v16c", type:"grid", no:"დავალება 2",
+  title:"გაარჩიე ზმნები ტექსტიდან",
+  task:"წაიკითხე ნაწყვეტი და გაარჩიე მასში გამუქებული ზმნები ნიმუშის მიხედვით.",
+  hintLabel:"გაგიჭირდა? ნახე გარჩევის ნიმუში",
+  hintHtml:"<b>ხატავდა</b> – ზმნა ორპირიანია: <b>ის მას</b>. <b>ის</b> სუბიექტური პირია, III პირი, მხოლობითი რიცხვი, მისი ნიშანია ბოლოსართი <b>-ა</b>. <b>მას</b> ობიექტური პირია, პირდაპირი ობიექტი, რადგან ბრუნვაცვალებადია (რა ქნა? – დახატა მან ის). პირდაპირ ობიექტს ზმნაში ნიშანი არ აქვს. <b>გარდამავალი ზმნა</b>.<br><br><span style='color:var(--soft)'>გახსოვდეს: ერთპირიანი ზმნა ყოველთვის გარდაუვალია; სამპირიანი – ყოველთვის გარდამავალი; ორპირიანი გარდამავალია, თუ პირდაპირი ობიექტი აქვს, და გარდაუვალი, თუ ირიბი.</span>",
+  introHtml:"„ორი კვირის შემდეგ, როდესაც სახედარმა იმდენად მოიხედა, რომ შეეძლო ტვირთის აკიდება, მაგდანამ ერთიორად მეტი რძე <b>იყიდა</b>, ერთიორად მომეტებული მაწონი <b>შეაყენა</b>, მეზობლებისგან ორი დიდი გოდორი <b>ითხოვა</b>, <b>გადაჰკიდა</b> თავის ბედაურს, შიგ მჭიდროდ <b>ჩააწყო</b> თავისი ქილები და <b>გაუდგა</b> ქალაქის გზას. დღეს ვერავინ <b>იცნობდა</b> მაგდანას, ისე გაღიმებული, ბედნიერებით სავსე იყო. ჩვეულებრივ ტვირთქვეშ მოხრილი კი აღარ <b>მიღოღავდა</b>, არა, ამაყად <b>მიაბიჯებდა</b> და მხიარულად <b>შესცქეროდა</b> თავის თანაშემწე ლურჯა სახედარს და მის გარშემო სიხარულით მხტუნავ თავის ბავშვებს.“ <span style='color:var(--soft)'>(ეკატერინე გაბაშვილი, „მაგდანას ლურჯა“)</span>",
+  cols:[
+    {label:"პირები", typed:true},
+    {label:"პირიანობა", opts:["ერთპირიანი","ორპირიანი","სამპირიანი"]},
+    {label:"სუბიექტი", opts:["I მხოლობითი","I მრავლობითი","II მხოლობითი","II მრავლობითი","III მხოლობითი","III მრავლობითი"]},
+    {label:"სუბიექტის ნიშანი", opts:["ვ-","ვ- ... -თ","უნიშნო","-თ","-ს","-ა","-ო","-ეს","-ენ","-ნენ","-ან"]},
+    {label:"ობიექტი", opts:["არ აქვს","პირდაპირი","ირიბი","პირდაპირი და ირიბი"]},
+    {label:"გარდამავლობა", opts:["გარდამავალი","გარდაუვალი"]}
+  ],
+  items:[
+    {w:"იყიდა", a:["მან ის","ორპირიანი","III მხოლობითი","-ა","პირდაპირი","გარდამავალი"]},
+    {w:"შეაყენა", a:["მან ის","ორპირიანი","III მხოლობითი","-ა","პირდაპირი","გარდამავალი"]},
+    {w:"ითხოვა", a:["მან ის","ორპირიანი","III მხოლობითი","-ა","პირდაპირი","გარდამავალი"]},
+    {w:"გადაჰკიდა", a:["მან მას ის","სამპირიანი","III მხოლობითი","-ა","პირდაპირი და ირიბი","გარდამავალი"]},
+    {w:"ჩააწყო", a:["მან ის","ორპირიანი","III მხოლობითი","-ო","პირდაპირი","გარდამავალი"]},
+    {w:"გაუდგა", a:["ის მას","ორპირიანი","III მხოლობითი","-ა","ირიბი","გარდაუვალი"]},
+    {w:"იცნობდა", a:["ის მას","ორპირიანი","III მხოლობითი","-ა","პირდაპირი","გარდამავალი"]},
+    {w:"მიღოღავდა", a:["ის","ერთპირიანი","III მხოლობითი","-ა","არ აქვს","გარდაუვალი"]},
+    {w:"მიაბიჯებდა", a:["ის","ერთპირიანი","III მხოლობითი","-ა","არ აქვს","გარდაუვალი"]},
+    {w:"შესცქეროდა", a:["ის მას","ორპირიანი","III მხოლობითი","-ა","ირიბი","გარდაუვალი"]}
+  ]
+},
+/* ---------- 1.7 ---------- */
+{
+  id:"v17a", topic:"t29", host:"ex-v17a", type:"grid", no:"დავალება 1",
+  title:"დააჯგუფე ზმნები დროის მიხედვით",
+  task:"მიუთითე, რომელ დროს გამოხატავს თითოეული ზმნა.",
+  cols:[{label:"", opts:["წარსული","ახლანდელი","მომავალი"]}],
+  items:[
+    {w:"ჭამს", a:["ახლანდელი"]}, {w:"შეჭამა", a:["წარსული"]}, {w:"შეჭამს", a:["მომავალი"]},
+    {w:"წერს", a:["ახლანდელი"]}, {w:"მისწერა", a:["წარსული"]}, {w:"მისწერს", a:["მომავალი"]},
+    {w:"რეცხავს", a:["ახლანდელი"]}, {w:"გარეცხა", a:["წარსული"]}, {w:"გარეცხავს", a:["მომავალი"]},
+    {w:"ალაგებს", a:["ახლანდელი"]}, {w:"დაალაგა", a:["წარსული"]}, {w:"დაალაგებს", a:["მომავალი"]},
+    {w:"მოაქვს", a:["ახლანდელი"]}, {w:"მოიტანა", a:["წარსული"]}, {w:"მოიტანს", a:["მომავალი"]},
+    {w:"ინთება", a:["ახლანდელი"]}, {w:"აინთო", a:["წარსული"]}, {w:"აინთება", a:["მომავალი"]},
+    {w:"ავიწყდება", a:["ახლანდელი"]}, {w:"დაავიწყდა", a:["წარსული"]}, {w:"დაავიწყდება", a:["მომავალი"]},
+    {w:"აძლევს", a:["ახლანდელი"]}, {w:"მისცა", a:["წარსული"]}, {w:"მისცემს", a:["მომავალი"]}
+  ]
+},
+{
+  id:"v17b", topic:"t29", host:"ex-v17b", type:"typed", no:"დავალება 2",
+  title:"აწარმოე წარსული და მომავალი დროის ფორმები",
+  task:"მოცემულია ახლანდელი დროის ფორმა. ჩაწერე წარსულისა და მომავლის ფორმები.",
+  cols:[{label:"წარსული"},{label:"მომავალი"}],
+  items:[
+    {w:"ხატავს", a:["დახატა","დახატავს"]},
+    {w:"წერს", a:["დაწერა","დაწერს"]},
+    {w:"რეცხავს", a:["გარეცხა","გარეცხავს"]},
+    {w:"ალაგებს", a:["დაალაგა","დაალაგებს"]},
+    {w:"კითხულობს", a:["წაიკითხა","წაიკითხავს"]},
+    {w:"ამბობს", a:["თქვა","იტყვის"]},
+    {w:"ჭამს", a:["შეჭამა|ჭამა","შეჭამს"]}
+  ]
+},
+{
+  id:"v17c", topic:"t29", host:"ex-v17c", type:"sent", no:"დავალება 3",
+  title:"რომელ დროს გამოხატავს ზმნა ამ წინადადებაში?",
+  task:"ზოგჯერ დროს მხოლოდ ზმნის ფორმით ვერ გავარკვევთ – დააკვირდი მთელ წინადადებას.",
+  opts:["წარსული","ახლანდელი","მომავალი","ზოგადი (მარადიული)"],
+  items:[
+    {pre:"ეს მასწავლებელი კარგად ", hl:"ასწავლის", post:".", a:"ახლანდელი"},
+    {pre:"ნანა მოვა და გიორგის ლექსს ", hl:"ასწავლის", post:".", a:"მომავალი"},
+    {pre:"დედამიწა მზის ირგვლივ ", hl:"ტრიალებს", post:".", a:"ზოგადი (მარადიული)"},
+    {pre:"მზე აღმოსავლეთიდან ", hl:"ამოდის", post:".", a:"ზოგადი (მარადიული)"},
+    {pre:"ახლა ", hl:"წერს", post:".", a:"ახლანდელი"},
+    {pre:"გუშინ ", hl:"დაწერა", post:".", a:"წარსული"},
+    {pre:"ხვალ ", hl:"დაწერს", post:".", a:"მომავალი"}
+  ]
+}
+,
+/* ---------- 1.8 ---------- */
+{
+  id:"k18a", topic:"t30", host:"ex-k18a", type:"grid", no:"დავალება 1",
+  title:"დააჯგუფე ზმნები კილოს მიხედვით",
+  task:"მიუთითე, ფაქტს გამოხატავს ფორმა, სურვილს თუ ბრძანებას.",
+  cols:[{label:"", opts:["თხრობითი","კავშირებითი","ბრძანებითი"]}],
+  items:[
+    {w:"დაწერა", a:["თხრობითი"]}, {w:"დაწერე!", a:["ბრძანებითი"]},
+    {w:"ილაპარაკე!", a:["ბრძანებითი"]}, {w:"მიდის", a:["თხრობითი"]},
+    {w:"ლაპარაკობს", a:["თხრობითი"]}, {w:"წადი!", a:["ბრძანებითი"]},
+    {w:"შეიძლება წავიდე", a:["კავშირებითი"]}, {w:"უნდა დავალაგო", a:["კავშირებითი"]},
+    {w:"მინდა წავიკითხო", a:["კავშირებითი"]}, {w:"დაალაგე!", a:["ბრძანებითი"]},
+    {w:"თამაშობს", a:["თხრობითი"]}, {w:"არ ითამაშო!", a:["ბრძანებითი"]},
+    {w:"წაიკითხა", a:["თხრობითი"]}, {w:"ნუ ხატავ!", a:["ბრძანებითი"]},
+    {w:"ნეტავ წავიდე", a:["კავშირებითი"]}, {w:"შენდება", a:["თხრობითი"]},
+    {w:"ნუ ხმაურობ!", a:["ბრძანებითი"]}, {w:"შეკერა", a:["თხრობითი"]},
+    {w:"მინდა დავწერო", a:["კავშირებითი"]}, {w:"წერე!", a:["ბრძანებითი"]},
+    {w:"გარეცხა", a:["თხრობითი"]}, {w:"უნდა გავრეცხო", a:["კავშირებითი"]}
+  ]
+},
+{
+  id:"k18b", topic:"t30", host:"ex-k18b", type:"grid", no:"დავალება 2",
+  title:"წართქმითი თუ უკუთქმითი?",
+  task:"ბრძანებითი კილო ორგვარია: ან მოქმედება უნდა შესრულდეს, ან იკრძალება.",
+  cols:[{label:"", opts:["წართქმითი","უკუთქმითი"]}],
+  items:[
+    {w:"დაწერე!", a:["წართქმითი"]}, {w:"არ დაწერო!", a:["უკუთქმითი"]},
+    {w:"ნუ წერ!", a:["უკუთქმითი"]}, {w:"ითამაშე!", a:["წართქმითი"]},
+    {w:"ნუ ითამაშებ!", a:["უკუთქმითი"]}, {w:"დახატე!", a:["წართქმითი"]},
+    {w:"არ იხმაურო!", a:["უკუთქმითი"]}, {w:"იყვირე!", a:["წართქმითი"]},
+    {w:"ნუ ლაპარაკობ!", a:["უკუთქმითი"]}, {w:"ილაპარაკე!", a:["წართქმითი"]}
+  ]
+},
+{
+  id:"k18c", topic:"t30", host:"ex-k18c", type:"typed", no:"დავალება 3",
+  title:"აწარმოე ბრძანებითი კილო",
+  task:"ჩაწერე მეორე პირის ბრძანებითი ფორმა (ძახილის ნიშანი არ არის სავალდებულო).",
+  cols:[{label:""}],
+  items:[
+    {w:"მიდის", a:["წადი|წადი!"]},
+    {w:"ამოიყვანა", a:["ამოიყვანე|ამოიყვანე!"]},
+    {w:"თქვა", a:["თქვი|თქვი!"]},
+    {w:"ვფიქრობ", a:["იფიქრე|იფიქრე!"]},
+    {w:"გააფერადებს", a:["გააფერადე|გააფერადე!"]},
+    {w:"ჩააწყობს", a:["ჩააწყვე|ჩააწყვე!"]},
+    {w:"შეხედავს", a:["შეხედე|შეხედე!"]},
+    {w:"ვიპოვი", a:["იპოვე|იპოვე!"]},
+    {w:"ჩაალაგებს", a:["ჩაალაგე|ჩაალაგე!"]},
+    {w:"გაჩერდება", a:["გაჩერდი|გაჩერდი!"]}
+  ]
+},
+/* ---------- 1.9 ---------- */
+{
+  id:"a19a", topic:"t31", host:"ex-a19a", type:"grid", no:"დავალება 1",
+  title:"დაუსრულებელი თუ დასრულებული მოქმედება?",
+  task:"დააკვირდი, აქვს თუ არა ფორმას ზმნისწინი.",
+  cols:[{label:"", opts:["უსრული (დაუსრულებელი)","სრული (დასრულებული)"]}],
+  items:[
+    {w:"ვწერ", a:["უსრული (დაუსრულებელი)"]}, {w:"დავწერე", a:["სრული (დასრულებული)"]},
+    {w:"შლის", a:["უსრული (დაუსრულებელი)"]}, {w:"ვწერე", a:["უსრული (დაუსრულებელი)"]},
+    {w:"ვხატე", a:["უსრული (დაუსრულებელი)"]}, {w:"დავხატე", a:["სრული (დასრულებული)"]},
+    {w:"ვალაგე", a:["უსრული (დაუსრულებელი)"]}, {w:"დავალაგე", a:["სრული (დასრულებული)"]},
+    {w:"ვკერე", a:["უსრული (დაუსრულებელი)"]}, {w:"შევკერე", a:["სრული (დასრულებული)"]},
+    {w:"ვაშენე", a:["უსრული (დაუსრულებელი)"]}, {w:"ვკითხულობ", a:["უსრული (დაუსრულებელი)"]},
+    {w:"წავიკითხე", a:["სრული (დასრულებული)"]}, {w:"არხევს", a:["უსრული (დაუსრულებელი)"]},
+    {w:"შეარხია", a:["სრული (დასრულებული)"]}, {w:"ხსნის", a:["უსრული (დაუსრულებელი)"]},
+    {w:"გავხსენი", a:["სრული (დასრულებული)"]}, {w:"ამშვენებს", a:["უსრული (დაუსრულებელი)"]},
+    {w:"დაამშვენა", a:["სრული (დასრულებული)"]}, {w:"იწყებს", a:["უსრული (დაუსრულებელი)"]},
+    {w:"დაიწყო", a:["სრული (დასრულებული)"]}, {w:"გაიპარა", a:["სრული (დასრულებული)"]}
+  ]
+},
+{
+  id:"a19b", topic:"t31", host:"ex-a19b", type:"typed", no:"დავალება 2",
+  title:"აწარმოე სრული ასპექტი",
+  task:"ფრჩხილებში ზმნისწინია მითითებული. ჩაწერე მიღებული ფორმა.",
+  cols:[{label:""}],
+  items:[
+    {w:"კერავს (შე-)", a:["შეკერავს"]},
+    {w:"ალაგებს (და-)", a:["დაალაგებს"]},
+    {w:"ადნობს (და-)", a:["დაადნობს"]},
+    {w:"აკაკუნებს (და-)", a:["დააკაკუნებს"]},
+    {w:"ლესავს (გა-)", a:["გალესავს"]},
+    {w:"აშენებს (ა-)", a:["ააშენებს"]},
+    {w:"აფარებს (და-)", a:["დააფარებს"]},
+    {w:"გეგმავს (და-)", a:["დაგეგმავს"]},
+    {w:"ავსებს (გა-)", a:["გაავსებს"]},
+    {w:"თარგმნის (გადა-)", a:["გადათარგმნის"]}
+  ]
+},
+{
+  id:"a19c", topic:"t31", host:"ex-a19c", type:"grid", no:"დავალება 3",
+  title:"აქვს თუ არა ზმნას ასპექტი?",
+  task:"უასპექტოა ის ზმნები, რომლებიც ზმნისწინს არ დაირთავენ, და ისინიც, რომლებშიც ზმნისწინი მხოლოდ მიმართულებას აჩვენებს.",
+  cols:[{label:"", opts:["აქვს ასპექტი","უასპექტოა"]}],
+  items:[
+    {w:"არის", a:["უასპექტოა"]}, {w:"უყვარს", a:["უასპექტოა"]},
+    {w:"მოსწონს", a:["უასპექტოა"]}, {w:"იცის", a:["უასპექტოა"]},
+    {w:"სძინავს", a:["უასპექტოა"]}, {w:"მიცურავს", a:["უასპექტოა"]},
+    {w:"მირბის", a:["უასპექტოა"]}, {w:"მოდის", a:["უასპექტოა"]},
+    {w:"წერს", a:["აქვს ასპექტი"]}, {w:"კერავს", a:["აქვს ასპექტი"]},
+    {w:"ხატავს", a:["აქვს ასპექტი"]}, {w:"ალაგებს", a:["აქვს ასპექტი"]}
+  ]
+},
+{
+  id:"a19d", topic:"t31", host:"ex-a19d", type:"grid", no:"დავალება 4",
+  title:"შემაჯამებელი: დაახასიათე ზმნები",
+  task:"თითოეულ ზმნას დაახასიათე ნიმუშის მიხედვით.",
+  hintLabel:"გაგიჭირდა? ნახე ნიმუში",
+  hintHtml:"<b>შეაკეთა</b> – ზმნა ორპირიანია: მან ის. მან სუბიექტია, მესამე პირი, მხოლობითი რიცხვი, მისი ნიშანია -ა ბოლოსართი; ის პირდაპირი ობიექტია, მესამე პირი, მხოლობითი რიცხვი, ნიშანი არ აქვს. ზმნა <b>გარდამავალია</b>, რადგან შეიწყობს პირდაპირ ობიექტს. დრო <b>წარსული</b>, კილო <b>თხრობითი</b>, ასპექტი <b>სრული</b>, რადგან დაირთავს შე- ზმნისწინს და გამოხატავს დასრულებულ მოქმედებას.",
+  cols:[
+    {label:"პირიანობა", opts:["ერთპირიანი","ორპირიანი","სამპირიანი"]},
+    {label:"გარდამავლობა", opts:["გარდამავალი","გარდაუვალი"]},
+    {label:"დრო", opts:["წარსული","ახლანდელი","მომავალი"]},
+    {label:"კილო", opts:["თხრობითი","კავშირებითი","ბრძანებითი"]},
+    {label:"ასპექტი", opts:["უსრული","სრული"]}
+  ],
+  items:[
+    {w:"დაამატა", a:["ორპირიანი","გარდამავალი","წარსული","თხრობითი","სრული"]},
+    {w:"მოიკითხა", a:["ორპირიანი","გარდამავალი","წარსული","თხრობითი","სრული"]},
+    {w:"ვარდება", a:["ერთპირიანი","გარდაუვალი","ახლანდელი","თხრობითი","უსრული"]},
+    {w:"ქარგავს", a:["ორპირიანი","გარდამავალი","ახლანდელი","თხრობითი","უსრული"]},
+    {w:"დაატკბო", a:["ორპირიანი","გარდამავალი","წარსული","თხრობითი","სრული"]},
+    {w:"მისცა", a:["სამპირიანი","გარდამავალი","წარსული","თხრობითი","სრული"]},
+    {w:"ინახავს", a:["ორპირიანი","გარდამავალი","ახლანდელი","თხრობითი","უსრული"]},
+    {w:"შეწყვიტა", a:["ორპირიანი","გარდამავალი","წარსული","თხრობითი","სრული"]},
+    {w:"შეინახა", a:["ორპირიანი","გარდამავალი","წარსული","თხრობითი","სრული"]}
+  ]
+},
+/* ---------- 1.10 ---------- */
+{
+  id:"z110a", topic:"t32", host:"ex-z110a", type:"grid", no:"დავალება 1",
+  title:"რას აკეთებს ზმნისწინი?",
+  task:"ერთსა და იმავე ზმნისწინს სხვადასხვა ფუნქცია შეიძლება ჰქონდეს. მიუთითე, რა ფუნქციითაა იგი ამ ფორმაში.",
+  cols:[{label:"", opts:["უჩვენებს მიმართულებას","აწარმოებს მომავალ დროს","აწარმოებს სრულ ასპექტს","უცვლის მნიშვნელობას"]}],
+  items:[
+    {w:"მიფრინავს", a:["უჩვენებს მიმართულებას"]},
+    {w:"მოფრინავს", a:["უჩვენებს მიმართულებას"]},
+    {w:"მირბის", a:["უჩვენებს მიმართულებას"]},
+    {w:"წერს – დაწერს", a:["აწარმოებს მომავალ დროს"]},
+    {w:"კერავს – შეკერავს", a:["აწარმოებს მომავალ დროს"]},
+    {w:"ხატავს – დახატავს", a:["აწარმოებს მომავალ დროს"]},
+    {w:"წერს – დაწერა", a:["აწარმოებს სრულ ასპექტს"]},
+    {w:"კერავს – შეკერა", a:["აწარმოებს სრულ ასპექტს"]},
+    {w:"აშენებს – ააშენა", a:["აწარმოებს სრულ ასპექტს"]},
+    {w:"მოიგო", a:["უცვლის მნიშვნელობას"]},
+    {w:"წააგო", a:["უცვლის მნიშვნელობას"]},
+    {w:"გაიგო", a:["უცვლის მნიშვნელობას"]},
+    {w:"ჩააგო", a:["უცვლის მნიშვნელობას"]}
+  ]
+},
+{
+  id:"z110b", topic:"t32", host:"ex-z110b", type:"grid", no:"დავალება 2",
+  title:"მარტივი თუ რთული, იქითა თუ აქეთა?",
+  task:"ორივე სვეტში მიუთითე ზმნისწინის დახასიათება.",
+  cols:[
+    {label:"აგებულება", opts:["მარტივი","რთული"]},
+    {label:"მიმართულება", opts:["იქითა","აქეთა"]}
+  ],
+  items:[
+    {w:"მი-", a:["მარტივი","იქითა"]}, {w:"მო-", a:["მარტივი","აქეთა"]},
+    {w:"ა-", a:["მარტივი","იქითა"]}, {w:"და-", a:["მარტივი","იქითა"]},
+    {w:"ჩა-", a:["მარტივი","იქითა"]}, {w:"შე-", a:["მარტივი","იქითა"]},
+    {w:"გა-", a:["მარტივი","იქითა"]}, {w:"წა-", a:["მარტივი","იქითა"]},
+    {w:"გადა-", a:["რთული","იქითა"]}, {w:"ამო-", a:["რთული","აქეთა"]},
+    {w:"ჩამო-", a:["რთული","აქეთა"]}, {w:"შემო-", a:["რთული","აქეთა"]},
+    {w:"გადმო-", a:["რთული","აქეთა"]}, {w:"წამო-", a:["რთული","აქეთა"]}
+  ]
+},
+{
+  id:"z110c", topic:"t32", host:"ex-z110c", type:"grid", no:"დავალება 3",
+  title:"რომელი ძველი ზმნისწინია?",
+  task:"ამოიცანი, რომელი ძველი ზმნისწინი აქვს დართული ფორმას.",
+  cols:[{label:"", opts:["გან-","აღ-","წარ-","გარდა-","შთა-"]}],
+  items:[
+    {w:"განმარტა", a:["გან-"]}, {w:"განიცდის", a:["გან-"]},
+    {w:"განრისხდა", a:["გან-"]}, {w:"აღნიშნა", a:["აღ-"]},
+    {w:"აღწერა", a:["აღ-"]}, {w:"აღმოაჩინა", a:["აღ-"]},
+    {w:"წარმოთქვა", a:["წარ-"]}, {w:"წარმოიდგინა", a:["წარ-"]},
+    {w:"წარმოადგინა", a:["წარ-"]}, {w:"გარდაიქმნა", a:["გარდა-"]},
+    {w:"გარდაიცვალა", a:["გარდა-"]}, {w:"შთანთქა", a:["შთა-"]},
+    {w:"შთააგონა", a:["შთა-"]}
+  ]
+},
+{
+  id:"z110d", topic:"t32", host:"ex-z110d", type:"grid", no:"დავალება 4",
+  title:"დაირთავს თუ არა ზმნისწინს?",
+  task:"ზოგ ზმნას ზმნისწინი არასოდეს დაერთვის, ზოგი კი უზმნისწინოდ არ გვხვდება.",
+  cols:[{label:"", opts:["არასოდეს დაირთავს","მხოლოდ ზმნისწინიანია","ორივე ფორმა აქვს"]}],
+  items:[
+    {w:"არის", a:["არასოდეს დაირთავს"]}, {w:"სძულს", a:["არასოდეს დაირთავს"]},
+    {w:"უყვარს", a:["არასოდეს დაირთავს"]}, {w:"იცის", a:["არასოდეს დაირთავს"]},
+    {w:"აქვს", a:["არასოდეს დაირთავს"]}, {w:"ჰყავს", a:["არასოდეს დაირთავს"]},
+    {w:"მოდის", a:["მხოლოდ ზმნისწინიანია"]}, {w:"მიდის", a:["მხოლოდ ზმნისწინიანია"]},
+    {w:"წერს", a:["ორივე ფორმა აქვს"]}, {w:"ხატავს", a:["ორივე ფორმა აქვს"]},
+    {w:"კერავს", a:["ორივე ფორმა აქვს"]}, {w:"აშენებს", a:["ორივე ფორმა აქვს"]}
+  ]
+},
+/* ---------- 1.11 ---------- */
+{
+  id:"z111a", topic:"t33", host:"ex-z111a", type:"odd", no:"დავალება 1",
+  title:"აირჩიე სწორი ფორმა",
+  task:"ყოველ რიგში ერთი ფორმაა სწორი.",
+  lines:[
+    {q:"განსხვავება", t:["ასხვავებს","ანსხვავებს"], a:0},
+    {q:"განსახიერება", t:["ასახიერებს","ანსახიერებს"], a:0},
+    {q:"განვითარება", t:["ავითარებს","ანვითარებს"], a:0},
+    {q:"განზოგადება", t:["აზოგადებს","ანზოგადებს"], a:0},
+    {q:"განხორციელება", t:["ახორციელებს","ანხორციელებს"], a:0},
+    {q:"განახლება", t:["განაახლებს","ანახლებს"], a:0},
+    {q:"განთავისუფლება", t:["გამათავისუფლეთ","გამანთავისუფლეთ"], a:0},
+    {q:"განკურნება", t:["განიკურნება","ინკურნება"], a:0},
+    {q:"აღზრდა (უზმნისწინოდ)", t:["ზრდის","ღზრდის"], a:0},
+    {q:"აღზრდა", t:["აღმზრდელი","ამღზრდელი"], a:0},
+    {q:"აღნიშვნა", t:["აღვნიშნავ","ავღნიშნავ"], a:0},
+    {q:"აღწერა", t:["აღვწერ","ავღწერ"], a:0},
+    {q:"აღნუსხვა", t:["აღვნუსხავ","ავღნუსხავ"], a:0},
+    {q:"აღფრთოვანება", t:["აღმაფრთოვანებს","ამაღფრთოვანებს"], a:0},
+    {q:"წარდგენა", t:["წარმოგიდგენთ","გირდგენთ"], a:0}
+  ]
+},
+{
+  id:"z111b", topic:"t33", host:"ex-z111b", type:"text", fixMode:true, no:"დავალება 2",
+  title:"გაასწორე შეცდომები",
+  task:"დააწკაპუნე არასწორ ფორმას და ჩაწერე სწორი.",
+  lines:[
+    {t:["როგორც","უკვე","ავღნიშნე,","დიდი","მნიშვნელობა","აქვს","განათლებას."], a:[2], fx:{2:"აღვნიშნე|აღვნიშნე,"}},
+    {t:["ყოველი","კარგი","საქციელი","ახალი","თაობისა","ჩვენ","აგვაღფრთოვანებს."], a:[6], fx:{6:"აღგვაფრთოვანებს|აღგვაფრთოვანებს."}},
+    {t:["გთხოვთ,","გამანთავისუფლოთ","გაკვეთილებიდან."], a:[1], fx:{1:"გამათავისუფლოთ|განმათავისუფლოთ|გამათავისუფლოთ,"}},
+    {t:["სკოლა","თანდათან","ანვითარებდა","მოსწავლეთა","პროგრამას."], a:[2], fx:{2:"ავითარებდა|განავითარებდა"}},
+    {t:["მე","ყველაფერს","ავღრიცხავ","და","ამ","ჟურნალში","ავღნუსხავ."], a:[2,6], fx:{2:"აღვრიცხავ",6:"აღვნუსხავ|აღვნუსხავ."}},
+    {t:["მე","თქვენ","გირდგენთ","ჩემს","საბუთებს","განსახილველად."], a:[2], fx:{2:"წარმოგიდგენთ"}},
+    {t:["მშობლები","ბავშვებსაც","კარგად","ღზრდიან."], a:[3], fx:{3:"ზრდიან|ზრდიან."}},
+    {t:["თავის","გეგმებს","ყოველთვის","კარგად","ანხორციელებს."], a:[4], fx:{4:"ახორციელებს|განახორციელებს|ახორციელებს."}},
+    {t:["ამ","აზრს","ანვითარებს","ყველა","ის,","ვინც","იცის","საქმე."], a:[2], fx:{2:"ავითარებს|განავითარებს"}},
+    {t:["ამ","როლს","ცნობილი","მსახიობი","ანსახიერებს."], a:[4], fx:{4:"ასახიერებს|განასახიერებს|ასახიერებს."}}
+  ]
+},
+{
+  id:"z111c", topic:"t33", host:"ex-z111c", type:"text", fixMode:true, no:"დავალება 3",
+  title:"გაასწორე შეცდომები",
+  task:"დააწკაპუნე არასწორ ფორმას და ჩაწერე სწორი.",
+  lines:[
+    {t:["რა","პროექტს","ანხორციელებს","ახლა","ეს","ორგანიზაცია?"], a:[2], fx:{2:"ახორციელებს|განახორციელებს"}},
+    {t:["ეს","მსახიობი","კარგად","ანსახიერებს","როლებს."], a:[3], fx:{3:"ასახიერებს|განასახიერებს"}},
+    {t:["ეს","ოჯახი","ბავშვებს","კარგად","ღზრდის."], a:[4], fx:{4:"ზრდის|ზრდის."}},
+    {t:["ამ","საბუთებს","სამინისტროში","ვარდგენ."], a:[3], fx:{3:"წარვადგენ|წარვადგენ."}},
+    {t:["ერთ","აზრს","ყველაზე","ნუ","ანზოგადებ."], a:[4], fx:{4:"აზოგადებ|განაზოგადებ|აზოგადებ."}},
+    {t:["მე","უკვე","ავღნიშნე,","რომ","აქ","შეცდომაა","დაშვებული."], a:[2], fx:{2:"აღვნიშნე|აღვნიშნე,"}},
+    {t:["ეს","ორგანიზაცია","ყოველ","წელს","ანახლებს","თავის","ვებგვერდს."], a:[4], fx:{4:"განაახლებს|აახლებს"}},
+    {t:["ამ","წერილში","ყველაფერი","დეტალურად","ავღწერე."], a:[4], fx:{4:"აღვწერე|აღვწერე."}},
+    {t:["ეს","პროექტი","ჩვენი","გასანხორციელებელია."], a:[3], fx:{3:"განსახორციელებელია|გასახორციელებელია"}}
+  ]
+},
+{
+  id:"z111d", topic:"t33", host:"ex-z111d", type:"typed", no:"დავალება 4",
+  title:"ჩასვი სწორი ფორმა",
+  task:"ფრჩხილებში ამოსავალი სიტყვაა. ჩაწერე ის ფორმა, რომელიც წინადადებაში უნდა ჩაჯდეს.",
+  cols:[{label:""}],
+  items:[
+    {w:"მე ამ ფაქტებს ... და დასკვნებს მოგაწოდებთ. (განზოგადება)", a:["განვაზოგადებ|გავაზოგადებ"]},
+    {w:"გუშინ თქვენ არ ... სამსახურიდან? (განთავისუფლება)", a:["განთავისუფლდით|გათავისუფლდით"]},
+    {w:"ამ აზრს ... მეც ჩემს მოხსენებაში. (განვითარება)", a:["განვავითარებ|გავავითარებ"]},
+    {w:"მე ხვალვე ... ჩემს საბუთებს. (წარმოდგენა)", a:["წარმოვადგენ|წარვადგენ"]},
+    {w:"ამ როლს სპექტაკლში ვინ ...? (განსახიერება)", a:["განასახიერებს|ასახიერებს"]},
+    {w:"აირზენამ ფრენა ... რამდენიმე ქვეყანასთან. (განახლება)", a:["განაახლა|გაახლა"]},
+    {w:"ჩვენ უნდა ვეცადოთ, ჯანმრთელი ახალი თაობა ... . (აღზრდა)", a:["აღვზარდოთ"]},
+    {w:"ჩვენი დავალებაა, ... ყველაფერი ის, რაც ვნახეთ. (აღწერა)", a:["აღვწეროთ"]},
+    {w:"ყველაფერი უნდა ... , ოქმისთვის გვჭირდება. (აღნუსხვა)", a:["აღვნუსხოთ|აღინუსხოს"]}
+  ]
+}
 ];
 
 /* ============ დამხმარე ============ */
@@ -3361,7 +4804,6 @@ const el = (t,c,x)=>{const n=document.createElement(t); if(c)n.className=c; if(x
 const shuffle = a => { const b=a.slice(); for(let i=b.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1)); const t=b[i];b[i]=b[j];b[j]=t;} return b; };
 const LOCK = {};
 let NAME = "";
-try{ NAME = localStorage.getItem("ka7name") || ""; }catch(e){}
 
 function cardList(host, arr){
   const g = document.getElementById(host);
@@ -3401,12 +4843,27 @@ cardList("kitxv", KITXV);
 cardList("nacvorth2", NACVORTH2);
 cardList("komp1", KOMP1);
 cardList("komp2", KOMP2);
+cardList("zmnakat", ZMNAKAT);
+cardList("zmnaorth", ZMNAORTH);
+cardList("piri", PIRI);
+cardList("pirebi", PIREBI);
+cardList("pirrule", PIRRULE);
+cardList("pirorth", PIRORTH);
+cardList("droebi", DROEBI);
+cardList("droebi2", DROEBI2);
+cardList("kilo", KILO);
+cardList("aspekti", ASPEKTI);
+cardList("zmorth", ZMORTH);
 
 
 /* ============ სავარჯიშოს გარსი ============ */
 function shell(ex){
   const box = el("div","ex");
   const h = el("div","ex-h");
+  const rb = el("button","rulesbtn","წესები"); rb.type = "button";
+  rb.title = "გადახედე ამ თემის წესებს";
+  rb.addEventListener("click", ()=>{ setMode("rules"); window.scrollTo(0,0); });
+  h.appendChild(rb);
   h.appendChild(el("div","n", ex.no));
   h.appendChild(el("h3", null, ex.title));
   h.appendChild(el("p", null, ex.task));
@@ -3417,6 +4874,13 @@ function shell(ex){
   f.append(rs, pr);
   ex._pr = pr;
   box.append(h,b,f);
+  if(ex.hintHtml){
+    const d = document.createElement("details"); d.className = "hint";
+    const sm = el("summary", null, ex.hintLabel || "გაგიჭირდა? ნახე ნიმუში");
+    const inner = el("div","hint-in"); inner.innerHTML = ex.hintHtml;
+    d.append(sm, inner); b.appendChild(d);
+  }
+  if(ex.introHtml){ const d = el("div","exintro"); d.innerHTML = ex.introHtml; b.appendChild(d); }
   document.getElementById(ex.host).appendChild(box);
   return b;
 }
@@ -3431,17 +4895,26 @@ function grid(ex){
   ex._n = [];
   shuffle(ex.items).forEach((it,i)=>{
     const c = el("div","card");
-    c.appendChild(el("div","w", it.w));
+    const wEl = el("div","w");
+    if(it.wHtml) wEl.innerHTML = it.wHtml; else wEl.textContent = it.w;
+    c.appendChild(wEl);
     const sels = [];
     ex.cols.forEach((col,j)=>{
       const r = el("div","r"), id = "s_"+ex.id+"_"+i+"_"+j;
-      const lb = el("label", null, col.label); lb.setAttribute("for", id);
-      const s = document.createElement("select"); s.id = id;
-      s.appendChild(new Option("–",""));
-      const opts = (it.opts && it.opts[j]) ? it.opts[j] : col.opts;
-      shuffle(opts).forEach(o=> s.appendChild(new Option(o,o)));
-      s.addEventListener("change", ()=>{ s.className = s.value ? "set":""; ex._upd(); });
-      r.append(lb,s); c.appendChild(r); sels.push(s);
+      if(col.label){ const lb = el("label", null, col.label); lb.setAttribute("for", id); r.appendChild(lb); }
+      let s;
+      if(col.typed){
+        s = document.createElement("input"); s.type = "text"; s.id = id; s.className = "ans";
+        s.autocomplete = "off"; s.spellcheck = false;
+        s.addEventListener("input", ()=>{ s.classList.toggle("set", !!s.value.trim()); ex._upd(); });
+      } else {
+        s = document.createElement("select"); s.id = id;
+        s.appendChild(new Option("–",""));
+        const opts = (it.opts && it.opts[j]) ? it.opts[j] : col.opts;
+        shuffle(opts).forEach(o=> s.appendChild(new Option(o,o)));
+        s.addEventListener("change", ()=>{ s.className = s.value ? "set":""; ex._upd(); });
+      }
+      r.appendChild(s); c.appendChild(r); sels.push(s);
     });
     wrap.appendChild(c);
     ex._n.push({c:c, sels:sels, it:it});
@@ -3449,23 +4922,27 @@ function grid(ex){
   body.appendChild(wrap);
   ex._upd = ()=>{
     let d=0,a=0;
-    ex._n.forEach(n=> n.sels.forEach(s=>{ a++; if(s.value) d++; }));
+    ex._n.forEach(n=> n.sels.forEach(s=>{ a++; if(s.value.trim()) d++; }));
     progress(ex,d,a);
   };
+  const gnorm = v => String(v==null?"":v).trim().replace(/\s+/g," ").replace(/[.,!?;:]+$/,"").toUpperCase();
   ex._collect = ()=>{
     let ok=0,total=0; const items=[];
     ex._n.forEach(n=>{
       let all=true; const g=[];
       n.sels.forEach((s,j)=>{
         total++;
-        if(s.value === n.it.a[j]) ok++; else all=false;
-        g.push(s.value || "–");
+        const good = ex.cols[j].typed
+          ? String(n.it.a[j]).split("|").some(v=> gnorm(v)===gnorm(s.value))
+          : s.value === n.it.a[j];
+        if(good) ok++; else all=false;
+        g.push(s.value.trim() || "–");
       });
-      items.push({q:n.it.w, given:g.join(" · "), exp:n.it.a.join(" · "), ok:all});
+      items.push({q:n.it.w, given:g.join(" · "), exp:n.it.a.map(v=> String(v).split("|")[0]).join(" · "), ok:all});
     });
     return {ok:ok, total:total, items:items};
   };
-  ex._reset = ()=> ex._n.forEach(n=> n.sels.forEach(s=>{ s.value=""; s.className=""; }));
+  ex._reset = ()=> ex._n.forEach(n=> n.sels.forEach((s,j)=>{ s.value=""; s.className = ex.cols[j].typed ? "ans" : ""; }));
   ex._lock = ()=> ex._n.forEach(n=> n.sels.forEach(s=> s.disabled = true));
   ex._upd();
 }
@@ -3480,16 +4957,16 @@ function typed(ex){
     const ins = [];
     ex.cols.forEach((col,j)=>{
       const r = el("div","r"), id = "i_"+ex.id+"_"+i+"_"+j;
-      const lb = el("label", null, col.label); lb.setAttribute("for", id);
       const inp = document.createElement("input");
       inp.type = "text"; inp.id = id; inp.className = "ans";
       inp.autocomplete = "off"; inp.spellcheck = false;
       if(col.ph) inp.placeholder = col.ph;
+      if(col.label){ const lb = el("label", null, col.label); lb.setAttribute("for", id); r.appendChild(lb); }
       inp.addEventListener("input", ()=>{
         inp.classList.toggle("set", !!inp.value.trim());
         ex._upd();
       });
-      r.append(lb,inp); c.appendChild(r); ins.push(inp);
+      r.appendChild(inp); c.appendChild(r); ins.push(inp);
     });
     wrap.appendChild(c);
     ex._n.push({c:c, ins:ins, it:it});
@@ -3762,7 +5239,7 @@ function show(i){
   $("#topicnow").textContent = TOPICS[i].no + " " + TOPICS[i].title;
   $("#prevbtn").disabled = (i===0);
   $("#nextbtn").disabled = (i===TOPICS.length-1);
-  setMode(MODE);
+  setMode("ex");
   window.scrollTo(0,0);
   summary(TOPICS[i].id);
 }
@@ -3778,7 +5255,6 @@ TOPICS.forEach(t=>{
   const inp = document.createElement("input"); inp.id = "nm-"+t.id; inp.type="text"; inp.autocomplete="name"; inp.value = NAME;
   inp.addEventListener("input", ()=>{
     NAME = inp.value;
-    try{ localStorage.setItem("ka7name", NAME); }catch(e){}
     TOPICS.forEach(x=>{ const o = document.getElementById("nm-"+x.id); if(o && o!==inp) o.value = NAME; });
   });
   const sum = el("div"); sum.id = "sum-"+t.id;
@@ -3837,7 +5313,7 @@ function payload(t){
   });
   return {
     student: NAME.trim(),
-    lesson: "ქართული ენა 7 – " + t.no + " " + t.title,
+    lesson: "ქართული ენა – " + t.no + " " + t.title,
     when: new Date().toLocaleString("ka-GE"),
     totalOk:ok, totalAll:total, percent: total ? Math.round(ok/total*100) : 0,
     blocks: blocks
